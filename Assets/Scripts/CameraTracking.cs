@@ -7,6 +7,7 @@ public class CameraTracking : MonoBehaviour
 {
 
 	public Transform player;
+	public bool colorifyMeCapn = true;
 	PostProcessingBehaviour post;
 
 	List<GameObject> planets = new List<GameObject>();
@@ -43,11 +44,14 @@ public class CameraTracking : MonoBehaviour
 
 			var settings = post.profile.colorGrading.settings;
 
-			float something = 200 - (nearestPlanet.transform.position - player.position).magnitude * 5;
-			settings.basic.temperature = Mathf.Clamp(something, -100, 100);
-			settings.basic.temperature = Mathf.Abs(settings.basic.temperature) < 40 ? settings.basic.temperature / 3 : settings.basic.temperature;
-			settings.basic.temperature = Mathf.Abs(settings.basic.temperature) < 60 ? settings.basic.temperature / 2 : settings.basic.temperature;
-			settings.basic.temperature = Mathf.Abs(settings.basic.temperature) < 80 ? settings.basic.temperature / 1.5f : settings.basic.temperature;
+			if (colorifyMeCapn)
+			{
+				float something = 200 - (nearestPlanet.transform.position - player.position).magnitude * 5;
+				settings.basic.temperature = Mathf.Clamp(something, -100, 100);
+				settings.basic.temperature = Mathf.Abs(settings.basic.temperature) < 40 ? settings.basic.temperature / 3 : settings.basic.temperature;
+				settings.basic.temperature = Mathf.Abs(settings.basic.temperature) < 60 ? settings.basic.temperature / 2 : settings.basic.temperature;
+				settings.basic.temperature = Mathf.Abs(settings.basic.temperature) < 80 ? settings.basic.temperature / 1.5f : settings.basic.temperature;
+			}
 
 			post.profile.colorGrading.settings = settings;
 		}
