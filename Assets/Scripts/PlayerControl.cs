@@ -5,100 +5,103 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
 
-    [SerializeField]
-    private Rigidbody2D body;
+	[SerializeField]
+	private Rigidbody2D body;
+	public GameObject fartVFX;
+	private List<ParticleSystem> fartParticles = new List<ParticleSystem>();
 
-    public float DownVelocity;
-    // Use this for initialization
+	public float DownVelocity;
+	// Use this for initialization
 
-    public float turnSpeed
-    {
-        get
-        {
-            return _turnSpeed;
-        }
-        set
-        {
-            _turnSpeed = value;
-        }
-    }
-    [SerializeField]
-    private float _turnSpeed = 1;
-    public float fartSpeed
-    {
-        get { return _fartSpeed; }
-        set { _fartSpeed = value; }
-    }
-    [SerializeField]
-    private float _fartSpeed = 2;
+	public float turnSpeed
+	{
+		get
+		{
+			return _turnSpeed;
+		}
+		set
+		{
+			_turnSpeed = value;
+		}
+	}
 
-    //forward vector
-    public Vector3 forward
-    {
-        get
-        {
-            if (_forward == null)
-            {
-                _forward = Vector3.right;
-            }
-            return _forward;
-        }
-        set
-        {
-            _forward = value;
-        }
-    }
-    [SerializeField]
-    private Vector3 _forward;
+	[SerializeField]
+	private float _turnSpeed = 1;
 
-    [SerializeField]
-    private List<ParticleSystem> fartSystems;
+	public float fartSpeed
+	{
+		get { return _fartSpeed; }
+		set { _fartSpeed = value; }
+	}
 
-    private void Start()
-    {       
-        if (body == null)
-        {
-            body = GetComponent<Rigidbody2D>();
-        }
-        body.AddForce(new Vector2(0, DownVelocity), ForceMode2D.Impulse);
+	[SerializeField]
+	private float _fartSpeed = 2;
 
-        if (fartSystems == null){
-            fartSystems = new List<ParticleSystem>();
-        }
-    }
+	//forward vector
+	public Vector3 forward
+	{
+		get
+		{
+			if (_forward == null)
+			{
+				_forward = Vector3.right;
+			}
+			return _forward;
+		}
+		set
+		{
+			_forward = value;
+		}
+	}
 
-    // Update is called once per frame
-    private void Update()
-    {
-        float horizontal = Input.GetAxis("Horizontal");
-        bool isFarting = Input.GetKey(KeyCode.Space);
-        //rotate!
-        if (horizontal != 0.0f){
+	[SerializeField]
+	private Vector3 _forward;
+
+	private void Start()
+	{
+        
+		if (body == null)
+		{
+			body = GetComponent<Rigidbody2D>();
+		}
+		body.AddForce(new Vector2(0, DownVelocity), ForceMode2D.Impulse);
+	}
+
+	// Update is called once per frame
+	private void Update()
+	{
+		float horizontal = Input.GetAxis("Horizontal");
+		bool isFarting = Input.GetKey(KeyCode.Space);
+		//rotate!
+		if (horizontal != 0)
+		{
 			transform.Rotate(new Vector3(0, 0, -horizontal * turnSpeed)); //negative due to rotation
 		}
-        if (isFarting)
-        {
-            Vector3 currentForward = Quaternion.Euler(0, 0, transform.root.eulerAngles.z) * forward;
-            body.AddForce(currentForward * fartSpeed, ForceMode2D.Impulse);
-			foreach (ParticleSystem particle in fartSystems)
-			{
-                if (particle.isStopped)
-				{
-					particle.Play();
-				}
-			}
+		if (isFarting)
+		{
+			Vector3 currentForward = Quaternion.Euler(0, 0, transform.root.eulerAngles.z) * forward;
+			body.AddForce(currentForward * fartSpeed, ForceMode2D.Impulse);
+		}
 
-        } else {
-            foreach (ParticleSystem particle in fartSystems){
-                if(particle.isPlaying){
-                    particle.Stop();
-                }
-            }
-        }
+		//Farting VFX?
+		foreach (var i in fartParticles)
+		{
+			i.emission.enabled = isFarting;
+		}
 
-        //Debug stuff
-        if(Input.GetKeyDown(KeyCode.Z)){
-            body.velocity = Vector3.zero;
-        }
-    }
+		//Debug stuff
+		if (Input.GetKeyDown(KeyCode.Z))
+		{
+			body.velocity = Vector3.zero;
+		}
+	}
+
+	void OnEnable()
+	{
+		//Register farts
+		foreach (var i in fartVFX.GetComponentsInChildren<ParticleSystem>())
+		{
+			fartParticles.Add(i);
+		}
+	}
 }
