@@ -17,7 +17,8 @@ public class Gravity : MonoBehaviour
             {
                 _mass = 0.01f; //maybe new default
             }
-            _mass = value;
+            else
+                _mass = value;
         }
     }
 
@@ -35,7 +36,14 @@ public class Gravity : MonoBehaviour
     //TODO:Uh fix this constant. It is the decay of gravity(mulitplies the distance away from the center of earth
     private const float DISTANCE_RELATIVE = 5000f; //relative 
 
-    //private const float GRAVITY_PULL_THRESHOLD = 0f; //do not apply gravity if the object if it is below this to improve performance
+    //LOL
+    public float slingshotMultiplier
+    {
+        get { return _slingshotMultiplier; }
+        set { if (value < 0) _slingshotMultiplier = 0; else _slingshotMultiplier = value; }
+    }
+    [SerializeField]
+    private float _slingshotMultiplier = 0.33f; //LOL
 
 
     private static Dictionary<GameObject, Rigidbody2D> orbitalsTable; //static meh...figure out later
@@ -81,16 +89,16 @@ public class Gravity : MonoBehaviour
     //take it out of it.
     private void OnTriggerExit2D(Collider2D collision)
     {
-		GameObject orbital = collision.gameObject;
-		if (orbitalsTable.ContainsKey(orbital) && inOrbitTable.Contains(orbital))
-		{
-			inOrbitTable.Remove(orbital);
-		}
+        GameObject orbital = collision.gameObject;
+        if (orbitalsTable.ContainsKey(orbital) && inOrbitTable.Contains(orbital))
+        {
+            inOrbitTable.Remove(orbital);
+        }
     }
 
     private void Update()
     {
-        
+
     }
 
     //Do all of our gravity here since it's physics.
@@ -104,11 +112,11 @@ public class Gravity : MonoBehaviour
             Vector2 direction = transform.position - orbital.transform.position;
 
             //original gravity
-            //float force = GRAVITATIONAL_MULTIPLIER * MASS_MULTIPLIER * mass / Mathf.Pow(direction.magnitude * DISTANCE_RELATIVE + DISTANCE_DEFAULT, 2);
-            //body.AddForce(direction.normalized * force, ForceMode2D.Force);
+            float force = GRAVITATIONAL_MULTIPLIER * MASS_MULTIPLIER * mass / Mathf.Pow(direction.magnitude * DISTANCE_RELATIVE + DISTANCE_DEFAULT, 2);
+            body.AddForce(direction.normalized * force, ForceMode2D.Force);
 
             //slingshot stupidness
-            body.AddForce(direction * mass, ForceMode2D.Impulse);
+            body.AddForce(direction * slingshotMultiplier, ForceMode2D.Impulse);
         }
     }
 
