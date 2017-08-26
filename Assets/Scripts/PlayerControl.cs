@@ -8,7 +8,7 @@ public class PlayerControl : MonoBehaviour
 
 	[SerializeField]
 	private Rigidbody2D body;
-	private Animator cameraAnim;
+	private Animator cameraAnim, mahAnim;
 	public GameObject fartVFX;
 	private List<ParticleSystem> fartParticles = new List<ParticleSystem>();
 	public Image fartOMeter;
@@ -73,6 +73,7 @@ public class PlayerControl : MonoBehaviour
 			body = GetComponent<Rigidbody2D>();
 		}
 		cameraAnim = Camera.main.GetComponent<Animator>();
+		mahAnim = GetComponent<Animator>();
 
 		body.AddForce(new Vector2(0, DownVelocity), ForceMode2D.Impulse);
 	}
@@ -121,7 +122,14 @@ public class PlayerControl : MonoBehaviour
 					em.enabled = true;
 				}
 			}
+
+			Vector3 currentForward = Quaternion.Euler(0, 0, transform.root.eulerAngles.z) * forward;
+			body.AddForce(currentForward * fartSpeed / 20, ForceMode2D.Impulse);
+
 		}
+
+		//Anim
+		mahAnim.SetBool("Farting", isKeyPressed);
 
 		currentFart = Mathf.Clamp01(currentFart);
 

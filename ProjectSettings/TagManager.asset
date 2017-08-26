@@ -43,3 +43,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Elephaintses
+    uniqueID: 3952592653
+    locked: 0
