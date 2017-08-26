@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1fe33e7de5606584081947bcfa112bb4
-timeCreated: 1503771030
+timeCreated: 1503777674
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -90,13 +90,23 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 416
+        y: 417
         width: 87
         height: 133
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.7851734, y: 0.37937778}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -39.5, y: 66.5}
+        - {x: -43.5, y: 63.5}
+        - {x: -43.5, y: -9.5}
+        - {x: -32.5, y: -55.5}
+        - {x: -23.5, y: -66.5}
+        - {x: 14.5, y: -66.5}
+        - {x: 33.5, y: -60.5}
+        - {x: 43.5, y: -44.5}
+        - {x: 43.5, y: -8.5}
+        - {x: 18.5, y: 66.5}
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
@@ -108,9 +118,17 @@ TextureImporter:
         width: 65
         height: 66
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -23.5, y: 33}
+        - {x: -32.5, y: 24}
+        - {x: -32.5, y: -19}
+        - {x: -19.5, y: -33}
+        - {x: 19.5, y: -33}
+        - {x: 32.5, y: -29}
+        - {x: 32.5, y: 29}
+        - {x: 20.5, y: 33}
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
@@ -122,23 +140,40 @@ TextureImporter:
         width: 66
         height: 65
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -29, y: 32.5}
+        - {x: -33, y: 29.5}
+        - {x: -33, y: -30.5}
+        - {x: -27, y: -32.5}
+        - {x: 18, y: -32.5}
+        - {x: 33, y: -26.5}
+        - {x: 33, y: 19.5}
+        - {x: 26, y: 32.5}
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Elephaint_Exploded_RightEar
       rect:
         serializedVersion: 2
-        x: 614
-        y: 418
+        x: 615
+        y: 417
         width: 68
         height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.40734595, y: 0.27943495}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 3, y: 41}
+        - {x: 0, y: 38}
+        - {x: -34, y: 6}
+        - {x: -34, y: -14}
+        - {x: -12, y: -41}
+        - {x: 11, y: -41}
+        - {x: 32, y: -25}
+        - {x: 34, y: -24}
+        - {x: 34, y: 41}
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
@@ -149,38 +184,64 @@ TextureImporter:
         y: 304
         width: 65
         height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.86951107, y: 0.18671915}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -31.5, y: 23}
+        - {x: -32.5, y: 20}
+        - {x: -32.5, y: -10}
+        - {x: 1.5, y: -23}
+        - {x: 32.5, y: -23}
+        - {x: 32.5, y: -8}
+        - {x: -7.5, y: 23}
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Elephaint_Exploded_Body
       rect:
         serializedVersion: 2
-        x: 142
-        y: 144
+        x: 140
+        y: 145
         width: 337
         height: 313
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -80.5, y: 156.5}
+        - {x: -117.5, y: 150.5}
+        - {x: -168.5, y: 82.5}
+        - {x: -168.5, y: -53.5}
+        - {x: -153.5, y: -127.5}
+        - {x: -104.5, y: -156.5}
+        - {x: 111.5, y: -156.5}
+        - {x: 168.5, y: -143.5}
+        - {x: 168.5, y: 80.5}
+        - {x: 94.5, y: 156.5}
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Elephaint_Exploded_Mouth
       rect:
         serializedVersion: 2
-        x: 546
+        x: 544
         y: 316
         width: 39
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -6.5, y: 18.5}
+        - {x: -19.5, y: 18.5}
+        - {x: -19.5, y: -5.5}
+        - {x: -17.5, y: -14.5}
+        - {x: -13.5, y: -18.5}
+        - {x: 17.5, y: -18.5}
+        - {x: 19.5, y: -17.5}
+        - {x: 19.5, y: 4.5}
+        - {x: 15.5, y: 10.5}
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
@@ -191,10 +252,18 @@ TextureImporter:
         y: 318
         width: 110
         height: 99
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.17282993, y: 0.2122032}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 36, y: 49.5}
+        - {x: 7, y: 31.5}
+        - {x: -55, y: -25.5}
+        - {x: -55, y: -49.5}
+        - {x: -21, y: -49.5}
+        - {x: 14, y: -42.5}
+        - {x: 55, y: 10.5}
+        - {x: 55, y: 49.5}
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
@@ -205,38 +274,64 @@ TextureImporter:
         y: 100
         width: 111
         height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.81722873, y: 0.7802952}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -23.5, y: 48}
+        - {x: -37.5, y: 47}
+        - {x: -55.5, y: 23}
+        - {x: -55.5, y: -19}
+        - {x: -26.5, y: -48}
+        - {x: 17.5, y: -48}
+        - {x: 55.5, y: -2}
+        - {x: 55.5, y: 48}
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Elephaint_Exploded_FrontLeftLeg
       rect:
         serializedVersion: 2
-        x: 238
+        x: 240
         y: 0
         width: 89
         height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5587395, y: 0.84561324}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -9.5, y: 54}
+        - {x: -30.5, y: 47}
+        - {x: -41.5, y: 16}
+        - {x: -44.5, y: -3}
+        - {x: -44.5, y: -41}
+        - {x: -19.5, y: -54}
+        - {x: 31.5, y: -54}
+        - {x: 44.5, y: -43}
+        - {x: 44.5, y: 34}
+        - {x: 41.5, y: 54}
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Elephaint_Exploded_FrontRightLeg
       rect:
         serializedVersion: 2
-        x: 482
-        y: 16
+        x: 484
+        y: 14
         width: 87
         height: 106
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.3244762, y: 0.57505596}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -36.5, y: 53}
+        - {x: -43.5, y: 32}
+        - {x: -43.5, y: -31}
+        - {x: -10.5, y: -53}
+        - {x: 36.5, y: -53}
+        - {x: 43.5, y: -38}
+        - {x: 43.5, y: 28}
+        - {x: 11.5, y: 53}
       physicsShape: []
       tessellationDetail: 0
     outline: []
