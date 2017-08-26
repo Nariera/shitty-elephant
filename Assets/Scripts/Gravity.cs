@@ -26,69 +26,90 @@ public class Gravity : MonoBehaviour
 
     /*
      * gravity is G(m1 * m2) / (dist * dist_relative_to_transform)^2 -> but since dist is relative and G is a constant
+     * 
+     * ehh....screw all this...stupid math
      */
     public readonly float GRAVITATIONAL_MULTIPLIER = Mathf.Pow(6.7f, -11f); //gravitational multiplier
     public readonly float MASS_MULTIPLIER = Mathf.Pow(5.98f, 24f); //mass of earth
     public readonly float DISTANCE_DEFAULT = Mathf.Pow(6.38f, 6); //sea level distance
-
     //TODO:Uh fix this constant. It is the decay of gravity(mulitplies the distance away from the center of earth
-    private const float DISTANCE_RELATIVE = 1f; //relative 
+    private const float DISTANCE_RELATIVE = 5000f; //relative 
 
     //private const float GRAVITY_PULL_THRESHOLD = 0f; //do not apply gravity if the object if it is below this to improve performance
 
 
-    private static List<Rigidbody2D> orbitalsTable; //static since there is no reason 
+    private static Dictionary<GameObject, Rigidbody2D> orbitalsTable; //static meh...figure out later
+
+    private List<GameObject> inOrbitTable;
+
+    private CircleCollider2D trigger;
 
     // Use this for initialization
     private void Start()
     {
+        if (trigger == null)
+        {
+            trigger = GetComponent<CircleCollider2D>();
+        }
         //initialize orbitals in a list
-        //TODO: Uh...scrap it?
+        //TODO: Uh...scrap it? Change it to if object is inside the collider...do later
         if (orbitalsTable == null)
         {
-            orbitalsTable = new List<Rigidbody2D>();
+            orbitalsTable = new Dictionary<GameObject, Rigidbody2D>();
             GameObject[] orbitals = GameObject.FindGameObjectsWithTag("Orbital");
             foreach (GameObject orbital in orbitals)
             {
-                try
-                {
-                    Rigidbody2D body = orbital.GetComponent<Rigidbody2D>();
-                    orbitalsTable.Add(body);
-
-                }
-                catch
-                {
-                    //do nothing...this shouldn't error here
-                    Debug.LogError("Something went wrong with orbital initialization in gravity.");
-                }
+                Rigidbody2D body = orbital.GetComponent<Rigidbody2D>();
+                if (body != null)
+                    orbitalsTable.Add(orbital, body);
             }
         }
-
+        //initialize inOrbitTable;
+        inOrbitTable = new List<GameObject>();
     }
 
-    // Update is called once per frame
-    private void Update()
+    //If it is in the trigger it gets add to inorbit for gravity or something effect
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        //we do a periodic update to add and remove orbitals in it's threshold gravitational pull;
-    }
-
-    //Do all of our gravity here
-    private void FixedUpdate()
-    {
-        //change this later to orbital in threshold
-        foreach (Rigidbody2D orbital in orbitalsTable)
+        GameObject orbital = collision.gameObject;
+        if (orbitalsTable.ContainsKey(orbital) && !inOrbitTable.Contains(orbital))
         {
-            ExertGravity(orbital);
+            inOrbitTable.Add(orbital);
         }
     }
 
-    //Exert gravity on objects
-    private void ExertGravity(Rigidbody2D orbital)
+    //take it out of it.
+    private void OnTriggerExit2D(Collider2D collision)
     {
-		Vector2 direction = transform.position - orbital.transform.position;
-        float force = GRAVITATIONAL_MULTIPLIER * MASS_MULTIPLIER * mass / Mathf.Pow(direction.magnitude * DISTANCE_RELATIVE + DISTANCE_DEFAULT,2);
-        orbital.AddForce(direction.normalized * force,ForceMode2D.Force);
+		GameObject orbital = collision.gameObject;
+		if (orbitalsTable.ContainsKey(orbital) && inOrbitTable.Contains(orbital))
+		{
+			inOrbitTable.Remove(orbital);
+		}
+    }
 
+    private void Update()
+    {
+        
+    }
+
+    //Do all of our gravity here since it's physics.
+    private void FixedUpdate()
+    {
+        //change this later to orbital
+        foreach (GameObject orbital in inOrbitTable)
+        {
+            Rigidbody2D body = orbitalsTable[orbital];
+            //apply force thingy
+            Vector2 direction = transform.position - orbital.transform.position;
+
+            //original gravity
+            //float force = GRAVITATIONAL_MULTIPLIER * MASS_MULTIPLIER * mass / Mathf.Pow(direction.magnitude * DISTANCE_RELATIVE + DISTANCE_DEFAULT, 2);
+            //body.AddForce(direction.normalized * force, ForceMode2D.Force);
+
+            //slingshot stupidness
+            body.AddForce(direction * mass, ForceMode2D.Impulse);
+        }
     }
 
 }

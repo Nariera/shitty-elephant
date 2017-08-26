@@ -52,7 +52,7 @@ public class PlayerControl : MonoBehaviour
     private Vector3 _forward;
     private void Start()
     {
-        Debug.Log("Test");
+        
         if (body == null)
         {
             body = GetComponent<Rigidbody2D>();
