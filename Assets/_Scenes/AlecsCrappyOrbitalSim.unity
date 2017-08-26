@@ -226,6 +226,10 @@ Prefab:
       propertyPath: _fartSpeed
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1377565632608810, guid: 034b184157f51eb408e3e33724af0d17, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 034b184157f51eb408e3e33724af0d17, type: 2}
   m_IsPrefabParent: 0
@@ -10831,7 +10835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1742309617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10846,6 +10850,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 0}
   fartVFX: {fileID: 644917211}
+  fartOMeter: {fileID: 0}
+  currentFart: 0
+  rateOfFartUse: 0.05
+  rateOfFartGain: 0.01
   DownVelocity: 3
   _turnSpeed: 2
   _fartSpeed: 0.1
@@ -10970,3 +10978,70 @@ MonoBehaviour:
   GravityWell: {fileID: 705356877}
   GravAcceleration: 2
   selfTransform: {fileID: 0}
+--- !u!1001 &1902211053
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4123883115815060, guid: f412627d626550f498b4b2b7d62c5bd4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -27.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123883115815060, guid: f412627d626550f498b4b2b7d62c5bd4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 10.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123883115815060, guid: f412627d626550f498b4b2b7d62c5bd4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123883115815060, guid: f412627d626550f498b4b2b7d62c5bd4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123883115815060, guid: f412627d626550f498b4b2b7d62c5bd4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123883115815060, guid: f412627d626550f498b4b2b7d62c5bd4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123883115815060, guid: f412627d626550f498b4b2b7d62c5bd4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123883115815060, guid: f412627d626550f498b4b2b7d62c5bd4, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 198922184127003682, guid: f412627d626550f498b4b2b7d62c5bd4,
+        type: 2}
+      propertyPath: randomSeed
+      value: -1647073437
+      objectReference: {fileID: 0}
+    - target: {fileID: 198922184127003682, guid: f412627d626550f498b4b2b7d62c5bd4,
+        type: 2}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 198922184127003682, guid: f412627d626550f498b4b2b7d62c5bd4,
+        type: 2}
+      propertyPath: InitialModule.randomizeRotationDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198922184127003682, guid: f412627d626550f498b4b2b7d62c5bd4,
+        type: 2}
+      propertyPath: SizeModule.curve.scalar
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 198922184127003682, guid: f412627d626550f498b4b2b7d62c5bd4,
+        type: 2}
+      propertyPath: ColorModule.gradient.maxGradient.atime0
+      value: 30840
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f412627d626550f498b4b2b7d62c5bd4, type: 2}
+  m_IsPrefabParent: 0
