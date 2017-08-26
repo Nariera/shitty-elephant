@@ -50,14 +50,21 @@ public class PlayerControl : MonoBehaviour
     }
     [SerializeField]
     private Vector3 _forward;
+
+    [SerializeField]
+    private List<ParticleSystem> fartSystems;
+
     private void Start()
-    {
-        
+    {       
         if (body == null)
         {
             body = GetComponent<Rigidbody2D>();
         }
         body.AddForce(new Vector2(0, DownVelocity), ForceMode2D.Impulse);
+
+        if (fartSystems == null){
+            fartSystems = new List<ParticleSystem>();
+        }
     }
 
     // Update is called once per frame
@@ -66,13 +73,27 @@ public class PlayerControl : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         bool isFarting = Input.GetKey(KeyCode.Space);
         //rotate!
-        if(horizontal != 0){
+        if (horizontal != 0.0f){
 			transform.Rotate(new Vector3(0, 0, -horizontal * turnSpeed)); //negative due to rotation
 		}
         if (isFarting)
         {
             Vector3 currentForward = Quaternion.Euler(0, 0, transform.root.eulerAngles.z) * forward;
             body.AddForce(currentForward * fartSpeed, ForceMode2D.Impulse);
+			foreach (ParticleSystem particle in fartSystems)
+			{
+                if (particle.isStopped)
+				{
+					particle.Play();
+				}
+			}
+
+        } else {
+            foreach (ParticleSystem particle in fartSystems){
+                if(particle.isPlaying){
+                    particle.Stop();
+                }
+            }
         }
 
         //Debug stuff

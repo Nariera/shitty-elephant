@@ -74,6 +74,9 @@ public class Gravity : MonoBehaviour
         }
         //initialize inOrbitTable;
         inOrbitTable = new List<GameObject>();
+
+        //test achievement register
+        Achievement.instance.Register(gameObject.name + "Gravity", TestEvent);
     }
 
     //If it is in the trigger it gets add to inorbit for gravity or something effect
@@ -98,7 +101,7 @@ public class Gravity : MonoBehaviour
 
     private void Update()
     {
-
+        Achievement.instance.Trigger(gameObject.name + "Gravity");
     }
 
     //Do all of our gravity here since it's physics.
@@ -120,4 +123,8 @@ public class Gravity : MonoBehaviour
         }
     }
 
+    //Test Achievement event
+    private void TestEvent(){
+        Debug.Log(gameObject.name + " achieve trigger. LOL WUT!");
+    }
 }
