@@ -1,0 +1,3 @@
+[submodule "Assets/Utility-Scripts"]
+	path = Assets/Utility-Scripts
+	url = https://github.com/Stralor/Utility-Scripts.git
