@@ -86,7 +86,8 @@ public class PlayerControl : MonoBehaviour
 		//Farting VFX?
 		foreach (var i in fartParticles)
 		{
-			i.emission.enabled = isFarting;
+			var em = i.emission;
+			em.enabled = isFarting;
 		}
 
 		//Debug stuff
