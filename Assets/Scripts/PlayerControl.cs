@@ -1,14 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
 
 	[SerializeField]
 	private Rigidbody2D body;
+	private Animator cameraAnim;
 	public GameObject fartVFX;
 	private List<ParticleSystem> fartParticles = new List<ParticleSystem>();
+	public Image fartOMeter;
+
+	[Range(0, 1)] public float currentFart;
+
+	public float rateOfFartUse = 0.05f;
+	public float rateOfFartGain = 0.01f;
 
 	public float DownVelocity;
 	// Use this for initialization
@@ -64,6 +72,8 @@ public class PlayerControl : MonoBehaviour
 		{
 			body = GetComponent<Rigidbody2D>();
 		}
+		cameraAnim = Camera.main.GetComponent<Animator>();
+
 		body.AddForce(new Vector2(0, DownVelocity), ForceMode2D.Impulse);
 	}
 
@@ -71,17 +81,17 @@ public class PlayerControl : MonoBehaviour
 	private void Update()
 	{
 		float horizontal = Input.GetAxis("Horizontal");
-		bool isFarting = Input.GetKey(KeyCode.Space);
+		bool isKeyPressed = Input.GetKey(KeyCode.Space);
+		bool isFarting = isKeyPressed && currentFart > rateOfFartUse;
 		//rotate!
 		if (horizontal != 0)
 		{
 			transform.Rotate(new Vector3(0, 0, -horizontal * turnSpeed)); //negative due to rotation
 		}
-		if (isFarting)
-		{
-			Vector3 currentForward = Quaternion.Euler(0, 0, transform.root.eulerAngles.z) * forward;
-			body.AddForce(currentForward * fartSpeed, ForceMode2D.Impulse);
-		}
+
+		//Cam Rot
+		cameraAnim.SetBool("Left", horizontal < 0);
+		cameraAnim.SetBool("Right", horizontal > 0);
 
 		//Farting VFX?
 		foreach (var i in fartParticles)
@@ -89,6 +99,33 @@ public class PlayerControl : MonoBehaviour
 			var em = i.emission;
 			em.enabled = isFarting;
 		}
+
+		//Physics && gas
+		if (!isKeyPressed)
+		{
+			currentFart += rateOfFartGain;
+		}
+		else if (currentFart > rateOfFartUse)
+		{
+			currentFart -= rateOfFartUse;
+			Vector3 currentForward = Quaternion.Euler(0, 0, transform.root.eulerAngles.z) * forward;
+			body.AddForce(currentForward * fartSpeed, ForceMode2D.Impulse);
+		}
+		else
+		{
+			foreach (var i in fartParticles)
+			{
+				if (i.name == "Stars")
+				{
+					var em = i.emission;
+					em.enabled = true;
+				}
+			}
+		}
+
+		currentFart = Mathf.Clamp01(currentFart);
+
+		fartOMeter.fillAmount = currentFart;
 
 		//Debug stuff
 		if (Input.GetKeyDown(KeyCode.Z))
