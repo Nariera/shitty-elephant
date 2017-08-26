@@ -55,7 +55,7 @@ public sealed class Achievement
 	//probably should throw an error or a flag or something...I dunno. I'm super tired
 	public bool IsTriggered(string name)
 	{
-		if (!instance.achievementTable.ContainsKey(name) || !instance.completionTable.ContainsKey(name) || instance.completionTable[name])
+		if (!instance.achievementTable.ContainsKey(name) || !instance.completionTable.ContainsKey(name))
 		{
 			return false;
 		}
