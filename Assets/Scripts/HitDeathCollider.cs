@@ -9,8 +9,8 @@ public class HitDeathCollider : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -23,7 +23,8 @@ public class HitDeathCollider : MonoBehaviour {
         PlayerControl thePlayer = other.GetComponent<PlayerControl>();
         if(thePlayer != null)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            thePlayer.gameObject.SetActive(false);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
         }
     }
 }
