@@ -59,7 +59,7 @@ public class Gravity : MonoBehaviour
 	//LOL
 
 
-	private static Dictionary<GameObject, Rigidbody2D> orbitalsTable;
+	public static Dictionary<GameObject, Rigidbody2D> orbitalsTable;
 	//static meh...figure out later
 
 	private List<GameObject> inOrbitTable = new List<GameObject>();

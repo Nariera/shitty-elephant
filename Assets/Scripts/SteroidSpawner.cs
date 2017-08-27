@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SteroidSpawner : MonoBehaviour
 {
+	public List<Sprite> asteroidArt = new List<Sprite>();
+
 	public List<GameObject> activeAsteroids = new List<GameObject>();
 	private List<GameObject> asteroidPool = new List<GameObject>();
 
@@ -12,7 +14,7 @@ public class SteroidSpawner : MonoBehaviour
 		activeAsteroids.RemoveAll(obj => obj == null || !obj.activeSelf);
 		asteroidPool.RemoveAll(obj => obj == null);
 
-		if (activeAsteroids.Count < 20)
+		if (activeAsteroids.Count < 100)
 		{
 			SpawnAsteroid();
 		}
@@ -26,7 +28,13 @@ public class SteroidSpawner : MonoBehaviour
 		{
 			asteroid = Instantiate(Resources.Load("Orbital")) as GameObject;
 			asteroid.transform.SetParent(transform);
-			asteroid.transform.localScale = Vector3.zero;
+			asteroid.transform.localScale = Vector3.one;
+
+			//Sprite
+			asteroid.GetComponent<SpriteRenderer>().sprite = asteroidArt [Random.Range(0, 2)];
+
+			asteroidPool.Add(asteroid);
+			Gravity.orbitalsTable.Add(asteroid, asteroid.GetComponent<Rigidbody2D>());
 		}
 
 		var xStart = Random.Range(-600, 600);
@@ -51,6 +59,10 @@ public class SteroidSpawner : MonoBehaviour
 		var boost = asteroid.GetComponent<Boosters>();
 
 		boost.initialBoost = new Vector2(-xStart / Random.Range(10, 100), -yStart / Random.Range(10, 100));
+		boost.initialTorque = Random.Range(-6f, 6f);
+
+		activeAsteroids.Add(asteroid);
+		asteroid.SetActive(true);
 
 		StartCoroutine(ReturnToPool(asteroid));
 	}
