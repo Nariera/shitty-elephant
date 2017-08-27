@@ -13,6 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Descript_Name: Tutorial
   StoryText: "Controls:                                  \u2190 : Turn CCW                           \u2192
-    : Turn CW                        \u2191/Space : Fart!Controls:                                  \u2190
-    : Turn CCW                           \u2192 : Turn CW     \u2191/Space : Fart!"
-  duration: 5
+    : Turn CW                        \u2191/Space : Fart!"
+  duration: 2
