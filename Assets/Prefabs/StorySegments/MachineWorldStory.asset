@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Name: MachineWorldStory
   m_EditorClassIdentifier: 
   Descript_Name: 
-  StoryText: 'The machines here wait desperately for a purpose you cannot give them.  They
-    have devoured all others. '
+  StoryText: These machines don't have a purpose anymore.
   duration: 10

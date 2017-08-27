@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Name: CamVacationStory
   m_EditorClassIdentifier: 
   Descript_Name: Cam Vacation
-  StoryText: This world was once a paradise.  The asteroid bombardments changed that.  You
-    don't even remember which side started it.
+  StoryText: I wish I could take a vacation.
   duration: 10
