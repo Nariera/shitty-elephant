@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
+	public GameObject gameOverScreen;
 
 	[SerializeField]
 	private Rigidbody2D body;
@@ -12,7 +13,6 @@ public class PlayerControl : MonoBehaviour
 	public GameObject fartVFX;
 	private List<ParticleSystem> fartParticles = new List<ParticleSystem>();
 	public Image fartOMeter;
-
 	[Range(0, 1)] public float currentFart;
 
 	public float rateOfFartUse = 0.05f;
@@ -152,10 +152,10 @@ public class PlayerControl : MonoBehaviour
 		fartOMeter.fillAmount = currentFart;
 
 		//Debug stuff
-		if (Input.GetKeyDown(KeyCode.Z))
-		{
-			body.velocity = Vector3.zero;
-		}
+//		if (Input.GetKeyDown(KeyCode.Z))
+//		{
+//			body.velocity = Vector3.zero;
+//		}
 	}
 
 	void OnEnable()
@@ -165,6 +165,8 @@ public class PlayerControl : MonoBehaviour
 		{
 			fartParticles.Add(i);
 		}
+
+		gameOverScreen.SetActive(false);
 	}
 
 	public void Respawn()
@@ -175,5 +177,12 @@ public class PlayerControl : MonoBehaviour
 		//body.velocity = Vector2.zero;
 		Gravity.AddOrbital(gameObject);
 		GetComponent<PlayerCondition>().Reset();
+		currentFart = 1;
+	}
+
+	void OnDisable()
+	{
+		gameOverScreen.SetActive(true);
+
 	}
 }

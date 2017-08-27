@@ -33,7 +33,7 @@ public class ElephantTracker : MonoBehaviour
 			transform.eulerAngles = theLiphantis.eulerAngles;
 			//transform.localEulerAngles = new Vector3(0.0f, 0.0f, -fAngle * Mathf.Rad2Deg);
 
-			v3Pos.x = 0.5f * Mathf.Sin(fAngle) + 0.5f;  // Place on ellipse touching 
+			v3Pos.x = 0.45f * Mathf.Sin(fAngle) + 0.5f;  // Place on ellipse touching 
 			v3Pos.y = 0.45f * Mathf.Cos(fAngle) + 0.5f;  //   side of viewport
 			v3Pos.z = Camera.main.nearClipPlane + 0.01f;  // Looking from neg to pos Z;
 			transform.position = Camera.main.ViewportToWorldPoint(v3Pos);
