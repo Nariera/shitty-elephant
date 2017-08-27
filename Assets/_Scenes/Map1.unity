@@ -987,6 +987,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350064052318c0d44bc1b234eec2d77a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  asteroidArt:
+  - {fileID: 21300000, guid: bf0c8be7d36eff24ebc92b7c0bc3c711, type: 3}
+  - {fileID: 21300002, guid: bf0c8be7d36eff24ebc92b7c0bc3c711, type: 3}
   activeAsteroids: []
 --- !u!4 &920360360 stripped
 Transform:
