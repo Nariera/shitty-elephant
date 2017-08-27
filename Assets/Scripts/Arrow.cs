@@ -17,7 +17,10 @@ public class Arrow : MonoBehaviour
 
 		if (!(v3Pos.x >= 0.0f && v3Pos.x <= 1.0f && v3Pos.y >= 0.0f && v3Pos.y <= 1.0f))
 		{		
-			var distMultiplier = Mathf.Clamp01((1.5f - Mathf.Abs(v3Pos.x)) * (2 - Mathf.Abs(v3Pos.y)) / 1.5f);
+			var xScreenDist = 2 - Mathf.Abs(v3Pos.x);
+			var yScreenDist = 3 - Mathf.Abs(v3Pos.y);
+			var sign = xScreenDist < 0 && yScreenDist < 0 ? -1 : 1;
+			var distMultiplier = Mathf.Clamp01(xScreenDist * yScreenDist * sign);
 
 			canvasGroup.alpha = distMultiplier;
 
