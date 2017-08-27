@@ -21,7 +21,7 @@ public class Poptart : MonoBehaviour {
 
             Vector3 directional = transform.position - collision.gameObject.transform.position;
 			float angle = Vector3.Angle(Vector3.right, directional);
-			Debug.Log("Angle = " + angle);
+			
 			transform.eulerAngles = new Vector3(0, 0, -angle);
 
 			particle.Play();

@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114889947602565104}
   m_Layer: 0
   m_Name: Planet
-  m_TagString: Untagged
+  m_TagString: Planetary
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 212302282030893470}
   - component: {fileID: 58402083173645448}
   - component: {fileID: 249526051536182536}
+  - component: {fileID: 114823315983580936}
   m_Layer: 0
   m_Name: PlanetAtmosphere
   m_TagString: Untagged
@@ -72,7 +73,7 @@ Transform:
   m_GameObject: {fileID: 1280973886066966}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 4818408406045100}
   m_RootOrder: 0
@@ -83,9 +84,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1224458201173484}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 711, y: -255, z: 0}
+  m_LocalScale: {x: 25, y: 25, z: 25}
   m_Children:
   - {fileID: 4818408406045100}
   m_Father: {fileID: 0}
@@ -99,7 +100,7 @@ Transform:
   m_GameObject: {fileID: 1020606732577326}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.5}
   m_Children:
   - {fileID: 4481431316440644}
   m_Father: {fileID: 4597281910933722}
@@ -161,8 +162,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453e6cb1a120e49a2a2d28adced69efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 50
+  _mass: 250
   _slingshotMultiplier: 0
+--- !u!114 &114823315983580936
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1280973886066966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19de6277f13db414d93f77b565ec4ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114889947602565104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -248,7 +260,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: fbddf58e67ba16f4f8794c98b2184eed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76ba26c54cce34105a596977fc3a019f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

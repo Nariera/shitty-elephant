@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using UnityEngine;
 //Basically a dumb achievemtn system
 public sealed class Achievement
 {
@@ -47,8 +47,8 @@ public sealed class Achievement
 		{
 			return false;
 		}
-		instance.achievementTable[name].Invoke();//call it
 		instance.completionTable[name] = true;
+		instance.achievementTable[name].Invoke();//call it
 		return true;
 	}
 
