@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: ArfStory
   m_EditorClassIdentifier: 
   Descript_Name: Arf
-  StoryText: This is Placeholder Text for Arf
+  StoryText: This place looks nice.
   duration: 10

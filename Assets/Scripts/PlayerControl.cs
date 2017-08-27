@@ -74,6 +74,9 @@ public class PlayerControl : MonoBehaviour
 
     private bool Victory = false;
 
+    private bool doneTutorial = false;
+    [SerializeField]
+    private StorySegment tutorial;
     private void Start()
     {
 
@@ -94,6 +97,13 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if(!doneTutorial && tutorial != null){
+
+
+            StoryManager.Instance.PlayStorySegment(tutorial);
+            doneTutorial = true;
+        }
+
         float horizontal = Input.GetAxis("Horizontal");
         bool isKeyPressed = Input.GetKey(KeyCode.Space) || Input.GetAxis("Vertical") > 0;
         bool isFarting = isKeyPressed && currentFart > rateOfFartUse;
@@ -118,8 +128,8 @@ public class PlayerControl : MonoBehaviour
         //superboost superceded the key press stuff
         if (IsSuperBoost)
         {
-            Debug.Log(CurrentBoostTime);
-            if (CurrentBoostTime > 1.5)
+
+            if (CurrentBoostTime > 5.4)
             {
                 Debug.Log("End Boost");
                 CurrentBoostTime = 0;
@@ -129,9 +139,87 @@ public class PlayerControl : MonoBehaviour
             Vector3 currentForward = Quaternion.Euler(0, 0, transform.root.eulerAngles.z) * forward;
             body.AddForce(currentForward * boostSpeed, ForceMode2D.Impulse);
 
+            //screw lerping...Who invented that anyways
+            //TODO: ^ Do that thing...seriously wtf is v...Oh right ehhhh Red Bull
             foreach (SpriteRenderer render in ListOfSprites)
             {
-                if (CurrentBoostTime > 1.5)
+                if (CurrentBoostTime > 5.15)
+                {
+                    render.color = new Color(1, 1, 1);
+                }
+                else if (CurrentBoostTime > 4.9)
+                {
+                    render.color = new Color(1, .4f, .8f);
+                }
+                else if (CurrentBoostTime > 4.7)
+                {
+                    render.color = new Color(.75f, 1, .25f);
+                }
+                else if (CurrentBoostTime > 4.5)
+                {
+                    render.color = new Color(1, 0, 1);
+                }
+                else if (CurrentBoostTime > 4.3)
+                {
+                    render.color = new Color(0, 0, 1);
+                }
+                else if (CurrentBoostTime > 4.1)
+                {
+                    render.color = new Color(0, 1, 0);
+                }
+                else if (CurrentBoostTime > 3.9)
+                {
+                    render.color = new Color(1, 1, 0);
+                }
+                else if (CurrentBoostTime > 3.75)
+                {
+                    render.color = new Color(1f, .4f, 0);
+                }
+                else if (CurrentBoostTime > 3.55)
+                {
+                    render.color = new Color(1, 0, 0);
+                }
+                else if (CurrentBoostTime > 3.35)
+                {
+                    render.color = new Color(1, 1, 1);
+                }
+                else if (CurrentBoostTime > 3.15)
+                {
+                    render.color = new Color(1, 1, 1);
+                }
+                else if (CurrentBoostTime > 2.95)
+                {
+                    render.color = new Color(1, .4f, .8f);
+                }
+                else if (CurrentBoostTime > 2.75)
+                {
+                    render.color = new Color(.75f, 1, .25f);
+                }
+                else if (CurrentBoostTime > 2.6)
+                {
+                    render.color = new Color(1, 0, 1);
+                }
+                else if (CurrentBoostTime > 2.4)
+                {
+                    render.color = new Color(0, 0, 1);
+                }
+                else if (CurrentBoostTime > 2.2)
+                {
+                    render.color = new Color(0, 1, 0);
+                }
+                else if (CurrentBoostTime > 2.05)
+                {
+                    render.color = new Color(1, 1, 0);
+                }
+                else if (CurrentBoostTime > 1.9)
+                {
+                    render.color = new Color(1f, .4f, 0);
+                }
+                else if (CurrentBoostTime > 1.75)
+                {
+                    render.color = new Color(1, 0, 0);
+                }
+                else if (CurrentBoostTime > 1.5)
                 {
                     render.color = new Color(1, 1, 1);
                 }
@@ -193,13 +281,17 @@ public class PlayerControl : MonoBehaviour
 
             }
         }
-        else if (currentFart > rateOfFartUse && !IsSuperBoost)
+        else if (currentFart > rateOfFartUse)
         {
-            currentFart -= rateOfFartUse;
+            if (!IsSuperBoost)
+            {
+                currentFart -= rateOfFartUse;
+            }
+
             Vector3 currentForward = Quaternion.Euler(0, 0, transform.root.eulerAngles.z) * forward;
             body.AddForce(currentForward * fartSpeed, ForceMode2D.Impulse);
         }
-        else if(!IsSuperBoost)
+        else
         {
             foreach (var i in fartParticles)
             {
@@ -268,7 +360,7 @@ public class PlayerControl : MonoBehaviour
     //Boost you one way super fast
     public void SuperForwardBoost()
     {
-        Debug.Log("Called");
+        Debug.Log("SUPAH BOOSTO!");
         IsSuperBoost = true;
         CurrentBoostTime = 0f;
     }
