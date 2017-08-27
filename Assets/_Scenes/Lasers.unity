@@ -159,11 +159,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4773656363088866, guid: 7b2fab7ae53269446b22ebdca131b8e7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 60.2
+      value: -164.1
       objectReference: {fileID: 0}
     - target: {fileID: 4773656363088866, guid: 7b2fab7ae53269446b22ebdca131b8e7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 108
+      value: 340
       objectReference: {fileID: 0}
     - target: {fileID: 4773656363088866, guid: 7b2fab7ae53269446b22ebdca131b8e7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -990,11 +990,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4960100431781326, guid: 45f9ff70356b96848a1588fc4633b3e1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 33.3
+      value: -59
       objectReference: {fileID: 0}
     - target: {fileID: 4960100431781326, guid: 45f9ff70356b96848a1588fc4633b3e1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 121.5
+      value: 326
       objectReference: {fileID: 0}
     - target: {fileID: 4960100431781326, guid: 45f9ff70356b96848a1588fc4633b3e1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1437,7 +1437,7 @@ GameObject:
   - component: {fileID: 635958615}
   - component: {fileID: 635958614}
   - component: {fileID: 635958617}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,15 +10,12 @@ public class Arrow : MonoBehaviour
 
 	void Update()
 	{
-		Vector3 dir = planetTarget.position - Camera.main.transform.position;
-
-
 		Vector3 v3Pos = Camera.main.WorldToViewportPoint(planetTarget.transform.position);
 
 		if (!(v3Pos.x >= 0.0f && v3Pos.x <= 1.0f && v3Pos.y >= 0.0f && v3Pos.y <= 1.0f))
 		{		
-			var xScreenDist = 2 - Mathf.Abs(v3Pos.x);
-			var yScreenDist = 3 - Mathf.Abs(v3Pos.y);
+			var xScreenDist = 2.5f - Mathf.Abs(v3Pos.x);
+			var yScreenDist = 4 - Mathf.Abs(v3Pos.y);
 			var sign = xScreenDist < 0 && yScreenDist < 0 ? -1 : 1;
 			var distMultiplier = Mathf.Clamp01(xScreenDist * yScreenDist * sign);
 

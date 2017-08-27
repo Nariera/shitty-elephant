@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
+	public GameObject gameOverScreen;
 
 	[SerializeField]
 	private Rigidbody2D body;
@@ -12,7 +13,6 @@ public class PlayerControl : MonoBehaviour
 	public GameObject fartVFX;
 	private List<ParticleSystem> fartParticles = new List<ParticleSystem>();
 	public Image fartOMeter;
-
 	[Range(0, 1)] public float currentFart;
 
 	public float rateOfFartUse = 0.05f;
@@ -65,7 +65,7 @@ public class PlayerControl : MonoBehaviour
 	[SerializeField]
 	private Vector3 _forward;
 
-    private Vector3 RespawnLocation;
+	private Vector3 RespawnLocation;
 
 	private void Start()
 	{
@@ -78,7 +78,7 @@ public class PlayerControl : MonoBehaviour
 		mahAnim = GetComponent<Animator>();
 
 		body.AddForce(new Vector2(0, DownVelocity), ForceMode2D.Impulse);
-        RespawnLocation = transform.position;
+		RespawnLocation = transform.position;
 	}
 
 	// Update is called once per frame
@@ -152,10 +152,10 @@ public class PlayerControl : MonoBehaviour
 		fartOMeter.fillAmount = currentFart;
 
 		//Debug stuff
-		if (Input.GetKeyDown(KeyCode.Z))
-		{
-			body.velocity = Vector3.zero;
-		}
+//		if (Input.GetKeyDown(KeyCode.Z))
+//		{
+//			body.velocity = Vector3.zero;
+//		}
 	}
 
 	void OnEnable()
@@ -165,13 +165,24 @@ public class PlayerControl : MonoBehaviour
 		{
 			fartParticles.Add(i);
 		}
+
+		gameOverScreen.SetActive(false);
 	}
 
-    public void Respawn(){
-        Debug.Log("Respawn!");
-        transform.position = RespawnLocation;
-        gameObject.SetActive(true);
-        //body.velocity = Vector2.zero;
-        Gravity.AddOrbital(gameObject);
-    }
+	public void Respawn()
+	{
+		Debug.Log("Respawn!");
+		transform.position = RespawnLocation;
+		gameObject.SetActive(true);
+		//body.velocity = Vector2.zero;
+		Gravity.AddOrbital(gameObject);
+		GetComponent<PlayerCondition>().Reset();
+		currentFart = 1;
+	}
+
+	void OnDisable()
+	{
+		gameOverScreen.SetActive(true);
+
+	}
 }

@@ -13,7 +13,7 @@ public class PlanetaryAtmos : MonoBehaviour
 
 		if (other.tag == "Orbital")
 		{
-			burnTargs.Add(other, BeginBurn(other.transform));
+			burnTargs.Add(other, BeginBurn(other));
 		}
 	}
 
@@ -26,14 +26,50 @@ public class PlanetaryAtmos : MonoBehaviour
 			GameObject burn;
 			burnTargs.TryGetValue(other, out burn);
 			if (burn)
-				burn.SetActive(false);
+			{
+				StartCoroutine(EndBurn(burn));
+			}
+
 			burnTargs.Remove(other);
 		}
 	}
 
-	GameObject BeginBurn(Transform target)
+	void OnTriggerStay2D(Collider2D other)
 	{
-		var burn = burnInPool.Find(obj => obj.activeSelf);
+		UpdateBurnPos(other);
+	}
+
+	void UpdateBurnPos(Collider2D other)
+	{
+		GameObject burn;
+		burnTargs.TryGetValue(other, out burn);
+		if (burn)
+		{
+			//Put it in front of movement
+			var rigid = other.GetComponent<Rigidbody2D>();
+			var part = burn.GetComponentInChildren<ParticleSystem>();
+			burn.transform.position = other.transform.position + (Vector3)rigid.velocity.normalized * other.bounds.extents.magnitude;
+
+			//Angle the circle front
+			var shape = part.shape;
+			shape.rotation = new Vector3(0, 0, Vector3.Angle(Vector3.up, rigid.velocity.normalized) + 10);
+		}
+	}
+
+	public void DisconnectBurnFromParent(Collider2D parent)
+	{
+		GameObject burn;
+		burnTargs.TryGetValue(parent, out burn);
+		if (burn)
+		{
+			burn.transform.SetParent(transform);
+			StartCoroutine(EndBurn(burn));
+		}
+	}
+
+	GameObject BeginBurn(Collider2D other)
+	{
+		var burn = burnInPool.Find(obj => !obj.activeSelf);
 
 		if (burn == null)
 		{
@@ -42,18 +78,31 @@ public class PlanetaryAtmos : MonoBehaviour
 			burnInPool.Add(burn);
 		}	
 
-		burn.transform.SetParent(target);
+
+		burn.transform.SetParent(other.transform);
 		burn.transform.localScale = Vector3.one;
 
-		var rigid = target.GetComponent<Rigidbody2D>();
-
 		//Velocity relative to the planet
-		burn.transform.localPosition = ((transform.position - target.position).normalized - (Vector3)rigid.velocity.normalized);
-
-		print(burn.transform.localPosition);
+		UpdateBurnPos(other);
 
 		burn.SetActive(true);
 
 		return burn;
+	}
+
+	IEnumerator EndBurn(GameObject burn)
+	{
+		//Stop the anim
+		var part = burn.GetComponentInChildren<ParticleSystem>();
+		part.Stop();
+
+		//Wait till it's wound down
+		yield return new WaitUntil(() => part == null || part.isStopped);
+
+		if (part == null)
+			yield break;
+
+		//Goodbye, return to pool
+		burn.SetActive(false);
 	}
 }

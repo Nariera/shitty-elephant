@@ -7,6 +7,7 @@ public class CameraTracking : MonoBehaviour
 {
 
 	public Transform player;
+	private PlayerCondition condition;
 	public bool colorifyMeCapn = true;
 	PostProcessingBehaviour post;
 
@@ -52,6 +53,8 @@ public class CameraTracking : MonoBehaviour
 				settings.basic.temperature = Mathf.Abs(settings.basic.temperature) < 40 ? settings.basic.temperature / 3 : settings.basic.temperature;
 				settings.basic.temperature = Mathf.Abs(settings.basic.temperature) < 60 ? settings.basic.temperature / 2 : settings.basic.temperature;
 				settings.basic.temperature = Mathf.Abs(settings.basic.temperature) < 80 ? settings.basic.temperature / 1.5f : settings.basic.temperature;
+
+				settings.basic.contrast = condition.temp * 0.01f + 0.5f;
 			}
 
 			post.profile.colorGrading.settings = settings;
@@ -69,5 +72,8 @@ public class CameraTracking : MonoBehaviour
 		}
 
 		post = GetComponent<PostProcessingBehaviour>();
+
+		if (player != null)
+			condition = player.GetComponent<PlayerCondition>();
 	}
 }

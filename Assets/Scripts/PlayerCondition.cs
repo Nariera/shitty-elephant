@@ -18,6 +18,11 @@ public class PlayerCondition : MonoBehaviour
 		temp = 100;
 	}
 
+	internal void Reset()
+	{
+		temp = 100;
+	}
+
 	void Update()
 	{
 		tempReadOnly = temp;
@@ -49,7 +54,9 @@ public class PlayerCondition : MonoBehaviour
 			temp += 5;
 
 		if (temp < 0)
+		{
 			gameObject.SetActive(false);
+		}
 		if (temp > 100)
 			temp = 100;
 	}
