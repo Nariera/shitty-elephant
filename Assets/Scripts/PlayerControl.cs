@@ -65,7 +65,7 @@ public class PlayerControl : MonoBehaviour
 	[SerializeField]
 	private Vector3 _forward;
 
-    private Vector3 RespawnLocation;
+	private Vector3 RespawnLocation;
 
 	private void Start()
 	{
@@ -78,7 +78,7 @@ public class PlayerControl : MonoBehaviour
 		mahAnim = GetComponent<Animator>();
 
 		body.AddForce(new Vector2(0, DownVelocity), ForceMode2D.Impulse);
-        RespawnLocation = transform.position;
+		RespawnLocation = transform.position;
 	}
 
 	// Update is called once per frame
@@ -167,11 +167,13 @@ public class PlayerControl : MonoBehaviour
 		}
 	}
 
-    public void Respawn(){
-        Debug.Log("Respawn!");
-        transform.position = RespawnLocation;
-        gameObject.SetActive(true);
-        //body.velocity = Vector2.zero;
-        Gravity.AddOrbital(gameObject);
-    }
+	public void Respawn()
+	{
+		Debug.Log("Respawn!");
+		transform.position = RespawnLocation;
+		gameObject.SetActive(true);
+		//body.velocity = Vector2.zero;
+		Gravity.AddOrbital(gameObject);
+		GetComponent<PlayerCondition>().Reset();
+	}
 }

@@ -18,6 +18,11 @@ public class PlayerCondition : MonoBehaviour
 		temp = 100;
 	}
 
+	internal void Reset()
+	{
+		temp = 100;
+	}
+
 	void Update()
 	{
 		tempReadOnly = temp;

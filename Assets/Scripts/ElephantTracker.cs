@@ -10,9 +10,6 @@ public class ElephantTracker : MonoBehaviour
 
 	void Update()
 	{
-		Vector3 dir = theLiphantis.position - Camera.main.transform.position;
-
-
 		Vector3 v3Pos = Camera.main.WorldToViewportPoint(theLiphantis.transform.position);
 
 		if (!(v3Pos.x >= -0.1f && v3Pos.x <= 1.1f && v3Pos.y >= -0.1f && v3Pos.y <= 1.1f))

@@ -394,6 +394,10 @@ Prefab:
       propertyPath: fartOMeter
       value: 
       objectReference: {fileID: 1229032636}
+    - target: {fileID: 4960100431781326, guid: 45f9ff70356b96848a1588fc4633b3e1, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45f9ff70356b96848a1588fc4633b3e1, type: 2}
   m_IsPrefabParent: 0
