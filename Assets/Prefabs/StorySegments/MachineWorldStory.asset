@@ -9,8 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebfa67dc28141fd46bf596d73503d7d3, type: 3}
-  m_Name: JackieStory
+  m_Name: MachineWorldStory
   m_EditorClassIdentifier: 
-  Descript_Name: Jackie
-  StoryText: Who would leave a face like that on a lifeless world?  Spooky.
+  Descript_Name: 
+  StoryText: 'The machines here wait desperately for a purpose you cannot give them.  They
+    have devoured all others. '
   duration: 10
