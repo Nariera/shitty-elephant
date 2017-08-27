@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 114461842906268676}
   m_Layer: 0
   m_Name: Elephaint
-  m_TagString: Untagged
+  m_TagString: Orbital
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -395,7 +395,7 @@ Transform:
   - {fileID: 4794641286856514}
   - {fileID: 4321276644474746}
   m_Father: {fileID: 4960100431781326}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4305532744659646
 Transform:
@@ -482,7 +482,7 @@ Transform:
   - {fileID: 4062605081908308}
   - {fileID: 4313958594836758}
   m_Father: {fileID: 4960100431781326}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &4960100431781326
 Transform:
@@ -494,8 +494,8 @@ Transform:
   m_LocalPosition: {x: -20, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4275818246744492}
   - {fileID: 4844508324398256}
+  - {fileID: 4275818246744492}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -606,7 +606,7 @@ MonoBehaviour:
   rateOfFartGain: 0.01
   DownVelocity: 0
   _turnSpeed: 2
-  _fartSpeed: 0.7
+  _fartSpeed: 0.6
   _forward: {x: 1, y: 0, z: 0}
 --- !u!198 &198010695629278912
 ParticleSystem:

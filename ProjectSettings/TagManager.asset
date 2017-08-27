@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Planetary
   - Orbital
+  - BG
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - BG
   - 
   - 
   - 
@@ -45,4 +46,7 @@ TagManager:
     locked: 0
   - name: Elephaintses
     uniqueID: 3952592653
+    locked: 0
+  - name: UI
+    uniqueID: 129943405
     locked: 0
