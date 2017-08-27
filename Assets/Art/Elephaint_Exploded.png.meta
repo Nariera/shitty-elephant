@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1fe33e7de5606584081947bcfa112bb4
-timeCreated: 1503812410
+timeCreated: 1503813396
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -94,9 +94,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 226
-        width: 651
-        height: 592
+        y: 235
+        width: 648
+        height: 585
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -107,8 +107,8 @@ TextureImporter:
       name: Elephaint_Exploded_LeftEye
       rect:
         serializedVersion: 2
-        x: 659
-        y: 615
+        x: 657
+        y: 617
         width: 184
         height: 186
       alignment: 0
@@ -122,7 +122,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 850
-        y: 623
+        y: 625
         width: 145
         height: 146
       alignment: 0
@@ -139,8 +139,8 @@ TextureImporter:
         y: 629
         width: 146
         height: 198
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.26269448, y: 0.37066466}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,11 +150,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 657
-        y: 356
+        y: 360
         width: 158
         height: 204
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.77648693, y: 0.44831055}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -164,11 +164,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 825
-        y: 369
+        y: 373
         width: 307
         height: 250
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.24975546, y: 0.23487781}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -177,12 +177,12 @@ TextureImporter:
       name: Elephaint_Exploded_LeftTusk
       rect:
         serializedVersion: 2
-        x: 751
-        y: 246
+        x: 755
+        y: 241
         width: 98
         height: 81
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.23868981, y: 0.42561057}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,12 +191,12 @@ TextureImporter:
       name: Elephaint_Exploded_Mouth
       rect:
         serializedVersion: 2
-        x: 908
+        x: 907
         y: 271
         width: 86
         height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.6573579, y: 0.74500084}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -206,11 +206,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1066
-        y: 260
+        y: 264
         width: 98
         height: 81
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.26943284, y: 0.7045691}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -220,11 +220,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
+        y: 14
         width: 215
-        height: 191
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 201
+      alignment: 9
+      pivot: {x: 0.780256, y: 0.6419619}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,13 +233,13 @@ TextureImporter:
       name: Elephaint_Exploded_BackRightLeg
       rect:
         serializedVersion: 2
-        x: 230
-        y: 17
-        width: 178
-        height: 203
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        x: 213
+        y: 8
+        width: 208
+        height: 216
+      alignment: 9
+      pivot: {x: 0.6122435, y: 0.7918956}
+      border: {x: 0, y: 60, z: 0, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -247,12 +247,12 @@ TextureImporter:
       name: Elephaint_Exploded_FrontLeftLeg
       rect:
         serializedVersion: 2
-        x: 688
+        x: 679
         y: 2
-        width: 214
-        height: 226
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 228
+        height: 242
+      alignment: 9
+      pivot: {x: 0.5527692, y: 0.81998795}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -261,12 +261,12 @@ TextureImporter:
       name: Elephaint_Exploded_FrontRightLeg
       rect:
         serializedVersion: 2
-        x: 958
+        x: 938
         y: 16
-        width: 205
-        height: 227
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 225
+        height: 239
+      alignment: 9
+      pivot: {x: 0.35909966, y: 0.7542293}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -275,12 +275,12 @@ TextureImporter:
       name: Elephaint_Exploded_Tail
       rect:
         serializedVersion: 2
-        x: 449
-        y: 142
-        width: 225
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 443
+        y: 141
+        width: 227
+        height: 64
+      alignment: 9
+      pivot: {x: 0.85433865, y: 0.5652411}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
