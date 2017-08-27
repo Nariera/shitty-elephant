@@ -246,9 +246,10 @@ GameObject:
   - component: {fileID: 212766959041492588}
   - component: {fileID: 95675744616012956}
   - component: {fileID: 50053049985325380}
-  - component: {fileID: 61598201483666782}
   - component: {fileID: 114461842906268676}
   - component: {fileID: 114570259368718574}
+  - component: {fileID: 114296055177261812}
+  - component: {fileID: 58209743279039136}
   m_Layer: 0
   m_Name: Elephaint
   m_TagString: Orbital
@@ -581,8 +582,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1852849351108100}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 33.3, y: 121.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4275818246744492}
@@ -636,8 +637,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61598201483666782
-BoxCollider2D:
+--- !u!58 &58209743279039136
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -649,18 +650,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.96, y: 6.64}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
-  m_EdgeRadius: 0
+  m_Radius: 3
 --- !u!95 &95675744616012956
 Animator:
   serializedVersion: 3
@@ -678,6 +669,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114296055177261812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1852849351108100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f7876130117a8418a649a26e1c34e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rate: 10
+  tempReadOnly: 0
 --- !u!114 &114461842906268676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -697,7 +701,7 @@ MonoBehaviour:
   rateOfFartGain: 0.01
   DownVelocity: 0
   _turnSpeed: 25
-  _fartSpeed: 1.2
+  _fartSpeed: 2
   _forward: {x: 1, y: 0, z: 0}
 --- !u!114 &114570259368718574
 MonoBehaviour:
