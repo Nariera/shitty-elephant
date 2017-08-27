@@ -35,8 +35,9 @@ public class Laser : MonoBehaviour {
         Vector2 dir = transform.position - orbitalTarget.transform.position;
         Rigidbody2D targetRB = orbitalTarget.GetComponent<Rigidbody2D>();
         if (targetRB != null)
-            targetRB.AddForce(dir.normalized * forceOfLaser);
-        selfRB.AddForce(-dir.normalized * forceOfLaser);
+            targetRB.AddForce(-dir.normalized * forceOfLaser);
+        if(selfRB != null)
+            selfRB.AddForce(dir.normalized * forceOfLaser);
     }
 
     void OnTriggerEnter2D(Collider2D other)
