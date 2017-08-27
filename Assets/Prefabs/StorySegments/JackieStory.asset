@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: JackieStory
   m_EditorClassIdentifier: 
   Descript_Name: Jackie
-  StoryText: This place is spooky.  You should leave.
+  StoryText: Who would leave a face like that on a lifeless world?  Spooky.
   duration: 10

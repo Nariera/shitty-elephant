@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebfa67dc28141fd46bf596d73503d7d3, type: 3}
   m_Name: MuddersStory
   m_EditorClassIdentifier: 
-  Descript_Name: Mudders Anonymous
-  StoryText: This is a Placeholder for Mudders Anonymous
+  Descript_Name: Home
+  StoryText: Everyone you knew here is dead.  The planet will soon follow.  You hope
+    that other worlds still live.
   duration: 10

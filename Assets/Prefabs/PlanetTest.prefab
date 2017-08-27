@@ -104,7 +104,7 @@ Transform:
   m_GameObject: {fileID: 1224458201173484}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 250, y: 100, z: 0}
-  m_LocalScale: {x: 25, y: 25, z: 25}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4818408406045100}
   m_Father: {fileID: 0}
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453e6cb1a120e49a2a2d28adced69efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mass: 250
+  _mass: 75
   _slingshotMultiplier: 0
 --- !u!114 &114889947602565104
 MonoBehaviour:
