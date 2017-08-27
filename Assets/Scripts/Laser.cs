@@ -42,7 +42,7 @@ public class Laser : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Orbital")
+        if(other.tag == "Orbital" || other.tag == "Player")
         {
             orbitalTarget = other.gameObject;
         }
@@ -50,7 +50,7 @@ public class Laser : MonoBehaviour {
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Orbital")
+        if (other.tag == "Orbital" || other.tag == "Player")
         {
             orbitalTarget = null;
         }

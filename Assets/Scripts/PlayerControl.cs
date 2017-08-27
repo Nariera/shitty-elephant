@@ -99,8 +99,8 @@ public class PlayerControl : MonoBehaviour
     {
         if(!doneTutorial && tutorial != null){
 
-
-            StoryManager.Instance.PlayStorySegment(tutorial);
+			//Controls:                                  ← : Turn CCW                           → : Turn CW                        ↑/Space : Fart!
+			StoryManager.Instance.PlayStorySegment(tutorial);
             doneTutorial = true;
         }
 

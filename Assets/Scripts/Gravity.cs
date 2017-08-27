@@ -85,6 +85,13 @@ public class Gravity : MonoBehaviour
 				if (body != null && !orbitalsTable.ContainsKey(orbital))
 					orbitalsTable.Add(orbital, body);
 			}
+			GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+			foreach (GameObject player in players)
+			{
+				Rigidbody2D body = player.GetComponent<Rigidbody2D>();
+				if (body != null && !orbitalsTable.ContainsKey(player))
+					orbitalsTable.Add(player, body);
+			}
 		}
 
 		//test achievement register
