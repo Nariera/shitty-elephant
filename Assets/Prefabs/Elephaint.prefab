@@ -642,8 +642,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1852849351108100}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 33.3, y: 121.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4275818246744492}
@@ -753,6 +753,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e88a9c5ea8ad411bb1735d1bd1bda55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverScreen: {fileID: 0}
+  victoryScreen: {fileID: 0}
   body: {fileID: 0}
   fartVFX: {fileID: 1309675777280566}
   fartOMeter: {fileID: 0}
@@ -762,6 +764,17 @@ MonoBehaviour:
   DownVelocity: 0
   _turnSpeed: 25
   _fartSpeed: 2
+  ListOfSprites:
+  - {fileID: 212660163312369400}
+  - {fileID: 212409923515079620}
+  - {fileID: 212326628639565474}
+  - {fileID: 212617805594623904}
+  - {fileID: 212940704850585210}
+  - {fileID: 212404236790158884}
+  - {fileID: 212008865512923238}
+  - {fileID: 212568529470234022}
+  IsSuperBoost: 0
+  CurrentBoostTime: 0
   _forward: {x: 1, y: 0, z: 0}
 --- !u!114 &114570259368718574
 MonoBehaviour:
@@ -11167,7 +11180,7 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1377817091252288}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_MotionVectors: 1
@@ -11293,7 +11306,7 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1295207829826468}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_MotionVectors: 1

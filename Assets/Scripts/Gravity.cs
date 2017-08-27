@@ -166,7 +166,7 @@ public class Gravity : MonoBehaviour
 		}
 		if (earthVisited && totalVisits > 4)
 		{
-			Debug.Log("WE WIN!!!");
+			Achievement.instance.Trigger("VictoryScreen");
 		}
 	}
 
