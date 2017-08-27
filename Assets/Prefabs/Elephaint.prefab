@@ -715,7 +715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialBoost: {x: 0, y: -30}
-  initialTorque: 1
+  initialTorque: 1000
 --- !u!198 &198010695629278912
 ParticleSystem:
   m_ObjectHideFlags: 1
