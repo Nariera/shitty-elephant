@@ -105,11 +105,19 @@ public class PlayerControl : MonoBehaviour
 		//Physics && gas
 		if (!isKeyPressed)
 		{
-			var mag = (CameraTracking.nearestPlanetToPlayer.transform.position - transform.position).magnitude;
+			if (CameraTracking.nearestPlanetToPlayer != null)
+			{
+				var mag = (CameraTracking.nearestPlanetToPlayer.transform.position - transform.position).magnitude;
 
-			var perc = Mathf.Clamp((100 - mag) / 100, 0.1f, 1);
+				var perc = Mathf.Clamp((100 - mag) / 100, 0.1f, 1);
 
-			currentFart += rateOfFartGain * perc;
+				currentFart += rateOfFartGain * perc;
+			}
+			else
+			{
+				currentFart += rateOfFartGain;
+
+			}
 		}
 		else if (currentFart > rateOfFartUse)
 		{

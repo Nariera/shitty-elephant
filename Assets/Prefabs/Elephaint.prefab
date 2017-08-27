@@ -249,6 +249,7 @@ GameObject:
   - component: {fileID: 61598201483666782}
   - component: {fileID: 114461842906268676}
   - component: {fileID: 114570259368718574}
+  - component: {fileID: 114296055177261812}
   m_Layer: 0
   m_Name: Elephaint
   m_TagString: Orbital
@@ -678,6 +679,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114296055177261812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1852849351108100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f7876130117a8418a649a26e1c34e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rate: 10
+  temp: 100
 --- !u!114 &114461842906268676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -697,7 +711,7 @@ MonoBehaviour:
   rateOfFartGain: 0.01
   DownVelocity: 0
   _turnSpeed: 25
-  _fartSpeed: 1.2
+  _fartSpeed: 2
   _forward: {x: 1, y: 0, z: 0}
 --- !u!114 &114570259368718574
 MonoBehaviour:
