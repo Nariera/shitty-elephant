@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 212302282030893470}
   - component: {fileID: 58402083173645448}
   - component: {fileID: 249526051536182536}
+  - component: {fileID: 114376756403543864}
   - component: {fileID: 114547422409791184}
   m_Layer: 0
   m_Name: PlanetAtmosphere
@@ -194,6 +195,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spedAngle: 0.1
+--- !u!114 &114376756403543864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1280973886066966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 952c15575aebb584080577caf9e1c8f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114547422409791184
 MonoBehaviour:
   m_ObjectHideFlags: 1
