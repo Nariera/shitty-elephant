@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Name: DinoEggStory
   m_EditorClassIdentifier: 
   Descript_Name: 
-  StoryText: 
+  StoryText: The people here tried to escape into a virtual realm.  Even their machinery
+    lies dead now.
   duration: 5
