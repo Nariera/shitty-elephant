@@ -275,5 +275,5 @@ AreaEffector2D:
   m_ForceMagnitude: 0
   m_ForceVariation: 0
   m_ForceTarget: 0
-  m_Drag: 1
+  m_Drag: 0.5
   m_AngularDrag: 100
