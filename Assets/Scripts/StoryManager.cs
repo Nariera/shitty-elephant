@@ -10,6 +10,7 @@ public class StoryManager : MonoBehaviour {
     public bool IsPlaying = false;
 
     public Text SubtitleText;
+    public GameObject DisplayPanel;
 
     // Use this for initialization
     void Awake () {
@@ -23,12 +24,14 @@ public class StoryManager : MonoBehaviour {
     void Start()
     {
         //Get Text Component
-        SubtitleText = GetComponent<Text>();
+        //SubtitleText = GetComponentInChildren<Text>();
         if (SubtitleText == null)
         {
             Debug.Log("There is no Text object on Story Manager");
         }
         SubtitleText.enabled = false;
+        if (DisplayPanel != null)
+            DisplayPanel.SetActive(false);
     }
 
     public void PlayStorySegment(StorySegment segment)
@@ -47,11 +50,15 @@ public class StoryManager : MonoBehaviour {
         Debug.Log("Started Playing: " + segment.name);
 
         IsPlaying = true;
+        if (DisplayPanel != null)
+            DisplayPanel.SetActive(true);
         SubtitleText.text = segment.StoryText;
         SubtitleText.enabled = true;
         yield return new WaitForSeconds(segment.duration);
         SubtitleText.text = "";
         SubtitleText.enabled = false;
+        if (DisplayPanel != null)
+            DisplayPanel.SetActive(false);
         IsPlaying = false;
         yield return null;
     }
