@@ -51,7 +51,7 @@ public class PlayerCondition : MonoBehaviour
 		temp -= dist / 100;
 
 		if (dist / 50 == 0)
-			temp += 5;
+			temp += 1;
 
 		if (temp < 0)
 		{
