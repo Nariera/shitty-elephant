@@ -141,33 +141,7 @@ public class Gravity : MonoBehaviour
 	private void UpdateWinCondition()
 	{
 		Debug.Log(gameObject.name + " is visited!");
-		int totalVisits = 0;
-		bool earthVisited = false;
-		if (Achievement.instance.IsTriggered("Facey McFace approached."))
-			totalVisits++;
-		if (Achievement.instance.IsTriggered("Blue Giant approached."))
-			totalVisits++;
-		if (Achievement.instance.IsTriggered("Mudders Anonymopus approached."))
-			totalVisits++;
-		if (Achievement.instance.IsTriggered("Dinosaur Egg approached."))
-			totalVisits++;
-		if (Achievement.instance.IsTriggered("Cratered My Yoshi approached."))
-			totalVisits++;
-		if (Achievement.instance.IsTriggered("Cam's Vacation approached."))
-			totalVisits++;
-		if (Achievement.instance.IsTriggered("Jackie approached."))
-			totalVisits++;
-		if (Achievement.instance.IsTriggered("The Shining approached."))
-			totalVisits++;
-		if (Achievement.instance.IsTriggered("Arf approached."))
-		{
-			totalVisits++;
-			earthVisited = true;
-		}
-		if (earthVisited && totalVisits > 4)
-		{
-			Achievement.instance.Trigger("VictoryScreen");
-		}
+		
 	}
 
 	public static void AddOrbital(GameObject orbital)
