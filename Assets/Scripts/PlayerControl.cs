@@ -82,12 +82,13 @@ public class PlayerControl : MonoBehaviour
 	private void Update()
 	{
 		float horizontal = Input.GetAxis("Horizontal");
-		bool isKeyPressed = Input.GetKey(KeyCode.Space);
+		bool isKeyPressed = Input.GetKey(KeyCode.Space) || Input.GetAxis("Vertical") > 0;
 		bool isFarting = isKeyPressed && currentFart > rateOfFartUse;
 		//rotate!
 		if (horizontal != 0)
 		{
-			transform.Rotate(new Vector3(0, 0, -horizontal * turnSpeed)); //negative due to rotation
+			body.angularVelocity = (-horizontal * turnSpeed * 10);
+			//transform.Rotate(new Vector3(0, 0, -horizontal * turnSpeed)); //negative due to rotation
 		}
 
 		//Cam Rot

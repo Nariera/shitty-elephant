@@ -17,11 +17,11 @@ public class Arrow : MonoBehaviour
 
 		if (!(v3Pos.x >= 0.0f && v3Pos.x <= 1.0f && v3Pos.y >= 0.0f && v3Pos.y <= 1.0f))
 		{		
-			var distMultiplier = Mathf.Clamp01((2 - Mathf.Abs(v3Pos.x)) * (3 - Mathf.Abs(v3Pos.y)));
+			var distMultiplier = Mathf.Clamp01((1.5f - Mathf.Abs(v3Pos.x)) * (2 - Mathf.Abs(v3Pos.y)) / 1.5f);
 
 			canvasGroup.alpha = distMultiplier;
 
-			transform.localScale = Vector3.one * distMultiplier;
+			transform.localScale = Vector3.one * distMultiplier / 2;
 
 			v3Pos.x -= 0.5f;  // Translate to use center of viewport
 			v3Pos.y -= 0.5f; 

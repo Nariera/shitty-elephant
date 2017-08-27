@@ -7,17 +7,12 @@ public class HitDeathCollider : MonoBehaviour
 {
 
 
-
-	// Use this for initialization
-	void Start()
+	void BoomBoom(Collider2D other)
 	{
-        
-	}
-	
-	// Update is called once per frame
-	void Update()
-	{
-		
+		var boomBoomInMyRoomRoom = Resources.Load("Explosion") as GameObject;
+		ContactPoint2D[] contacts = new ContactPoint2D[100];
+		other.GetContacts(contacts);
+		Instantiate(boomBoomInMyRoomRoom).transform.position = other.transform.position;
 	}
 
 	private void OnTriggerEnter2D(Collider2D other)
@@ -29,11 +24,12 @@ public class HitDeathCollider : MonoBehaviour
 			thePlayer.gameObject.SetActive(false);
 			//SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
 
-			var boomBoomInMyRoomRoom = Resources.Load("Explosion") as GameObject;
-			ContactPoint2D[] contacts = new ContactPoint2D[100];
-			other.GetContacts(contacts);
-			Instantiate(boomBoomInMyRoomRoom).transform.position = thePlayer.transform.position;
-
+			BoomBoom(other);
+		}
+		else if (other.tag == "Orbital")
+		{
+			Destroy(other.gameObject);
+			BoomBoom(other);
 		}
 	}
 }
