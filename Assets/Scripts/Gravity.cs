@@ -82,7 +82,7 @@ public class Gravity : MonoBehaviour
             foreach (GameObject orbital in orbitals)
             {
                 Rigidbody2D body = orbital.GetComponent<Rigidbody2D>();
-                if (body != null)
+                if (body != null && !orbitalsTable.ContainsKey(orbital))
                     orbitalsTable.Add(orbital, body);
             }
         }
@@ -157,6 +157,13 @@ public class Gravity : MonoBehaviour
         }
         if(earthVisited && totalVisits > 2){
             Debug.Log("WE WIN!!!");
+        }
+    }
+
+    public static void AddOrbital(GameObject orbital){
+        Rigidbody2D body = orbital.GetComponent<Rigidbody2D>();
+        if(body != null && !orbitalsTable.ContainsKey(orbital)){
+            orbitalsTable.Add(orbital, body);
         }
     }
 }
