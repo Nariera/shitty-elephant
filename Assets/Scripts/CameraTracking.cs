@@ -10,7 +10,7 @@ public class CameraTracking : MonoBehaviour
 	public bool colorifyMeCapn = true;
 	PostProcessingBehaviour post;
 
-	List<GameObject> planets = new List<GameObject>();
+	public static List<GameObject> planets = new List<GameObject>();
 
 	void Update()
 	{
@@ -59,7 +59,13 @@ public class CameraTracking : MonoBehaviour
 
 	void Awake()
 	{
-		planets.AddRange(GameObject.FindGameObjectsWithTag("Planetary"));
+		foreach (var t in GameObject.FindGameObjectsWithTag("Planetary"))
+		{
+			if (!planets.Contains(t))
+			{
+				planets.Add(t);
+			}
+		}
 
 		post = GetComponent<PostProcessingBehaviour>();
 	}
