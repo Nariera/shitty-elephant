@@ -474,6 +474,12 @@ Prefab:
       propertyPath: fartOMeter
       value: 
       objectReference: {fileID: 1229032636}
+    - target: {fileID: 114461842906268676, guid: 45f9ff70356b96848a1588fc4633b3e1,
+        type: 2}
+      propertyPath: tutorial
+      value: 
+      objectReference: {fileID: 11400000, guid: 887dd918c64b04e4c97e7450bc45fbf5,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45f9ff70356b96848a1588fc4633b3e1, type: 2}
   m_IsPrefabParent: 0
@@ -1291,6 +1297,7 @@ MonoBehaviour:
   IsSuperBoost: 0
   CurrentBoostTime: 0
   _forward: {x: 1, y: 0, z: 0}
+  tutorial: {fileID: 0}
 --- !u!1 &830182898
 GameObject:
   m_ObjectHideFlags: 0
