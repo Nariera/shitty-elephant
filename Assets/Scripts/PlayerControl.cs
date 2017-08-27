@@ -74,6 +74,9 @@ public class PlayerControl : MonoBehaviour
 
     private bool Victory = false;
 
+    private bool doneTutorial = false;
+    [SerializeField]
+    private StorySegment tutorial;
     private void Start()
     {
 
@@ -94,6 +97,13 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if(!doneTutorial && tutorial != null){
+
+
+            StoryManager.Instance.PlayStorySegment(tutorial);
+            doneTutorial = true;
+        }
+
         float horizontal = Input.GetAxis("Horizontal");
         bool isKeyPressed = Input.GetKey(KeyCode.Space) || Input.GetAxis("Vertical") > 0;
         bool isFarting = isKeyPressed && currentFart > rateOfFartUse;

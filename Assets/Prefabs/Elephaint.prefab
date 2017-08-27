@@ -776,6 +776,7 @@ MonoBehaviour:
   IsSuperBoost: 0
   CurrentBoostTime: 0
   _forward: {x: 1, y: 0, z: 0}
+  tutorial: {fileID: 11400000, guid: 887dd918c64b04e4c97e7450bc45fbf5, type: 2}
 --- !u!114 &114570259368718574
 MonoBehaviour:
   m_ObjectHideFlags: 1
