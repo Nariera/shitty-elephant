@@ -11,7 +11,7 @@ public class PlanetaryAtmos : MonoBehaviour
 	{
 		burnInPool.RemoveAll(obj => obj == null);
 
-		if (other.tag == "Orbital")
+		if (other.tag == "Orbital" && !burnTargs.ContainsKey(other))
 		{
 			burnTargs.Add(other, BeginBurn(other));
 		}
