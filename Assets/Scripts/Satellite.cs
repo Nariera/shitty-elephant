@@ -14,4 +14,9 @@ public class Satellite : MonoBehaviour
 			canvas.gameObject.SetActive(true);
 		}
 	}
+
+	void OnDisable()
+	{
+		canvas.GetComponent<Animator>().SetTrigger("Turn Off");
+	}
 }
