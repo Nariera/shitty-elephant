@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Name: FaceyStory
   m_EditorClassIdentifier: 
   Descript_Name: 
-  StoryText: This is Placeholder Text for Facey McFace
-  duration: 5
+  StoryText: It's possible someone still lives here, but you'd rather not deal with
+    them.
+  duration: 10

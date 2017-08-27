@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Name: TheShiningStory
   m_EditorClassIdentifier: 
   Descript_Name: The Shining
-  StoryText: This is Placeholder Text for The Shining
+  StoryText: The leaderof this world promised greatness.  All he brought was corruption
+    and ruin.
   duration: 10
