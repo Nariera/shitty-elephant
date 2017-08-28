@@ -11,17 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 114229380131688558}
-  - {fileID: 114882133375870580}
-  EditorEvents:
-  - {fileID: 114563339168421074}
-  - {fileID: 114239018964215060}
-  - {fileID: 114746039259406458}
-  - {fileID: 114873963017482372}
-  MasterBankRef: {fileID: 114882133375870580}
-  StringsBankRef: {fileID: 114229380131688558}
-  stringsBankWriteTime: 636394532565158053
+  EditorBanks: []
+  EditorEvents: []
+  MasterBankRef: {fileID: 0}
+  StringsBankRef: {fileID: 0}
   cacheVersion: 2
 --- !u!114 &114229380131688558
 MonoBehaviour:
@@ -35,11 +28,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Shelephants\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636394532565158053
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 848
   Exists: 1
 --- !u!114 &114239018964215060
 MonoBehaviour:
@@ -53,15 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: event:/Main Track
-  guid: 658900715fa66f4db973e6122566dd4e
+  guid: {}
   Banks:
-  - {fileID: 114882133375870580}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
+  - {}
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
 --- !u!114 &114324888212277950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,16 +150,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: event:/Spaaace
-  guid: 15d07449a28ca244844e4f5888750fbc
+  guid: {}
   Banks:
-  - {fileID: 114882133375870580}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
+  - {}
   Parameters:
-  - {fileID: 114324888212277950}
-  MinDistance: 0
-  MaxDistance: 0
+  - {}
 --- !u!114 &114721861168844276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,16 +182,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: event:/Heartbeat
-  guid: a92d78c4c105b5499a3d3bed651b8fba
+  guid: {}
   Banks:
-  - {fileID: 114882133375870580}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
+  - {}
   Parameters:
-  - {fileID: 114454932841545326}
-  MinDistance: 0
-  MaxDistance: 0
+  - {}
 --- !u!114 &114837647597736056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,15 +218,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: event:/Fart
-  guid: 026dd4ba39021244bbf201a9fd54380c
+  guid: {}
   Banks:
-  - {fileID: 114882133375870580}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
+  - {}
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 55
 --- !u!114 &114882133375870580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,9 +235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\Sagubaguy\Documents\GitHub\shitty-elephant\Shelephants\Build\Desktop\Master
     Bank.bank
-  lastModified: 636394532565138044
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 4741312
   Exists: 1
