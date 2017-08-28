@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: CrateredMyYoshiStory
   m_EditorClassIdentifier: 
   Descript_Name: 
-  StoryText: This place was stripped of anything useful decades ago.
-  duration: 5
+  StoryText: Everything useful was taken from this place.
+  duration: 10

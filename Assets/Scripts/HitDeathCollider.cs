@@ -18,17 +18,19 @@ public class HitDeathCollider : MonoBehaviour
 		{
 			boomBoomInMyRoomRoom = Instantiate(Resources.Load("Explosion")) as GameObject;
 		}
-		ContactPoint2D[] contacts = new ContactPoint2D[100];
-		other.GetContacts(contacts);
+		
 		boomBoomInMyRoomRoom.transform.position = other.transform.position;
 
 		boomBoomInMyRoomRoom.SetActive(true);
+        if(!boomBooms.Contains(boomBoomInMyRoomRoom)){
+            boomBooms.Add(boomBoomInMyRoomRoom);
+        }
 	}
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		//We probably want this to check for general orbital objects if those will exist and can burn up.
-		if (other.tag == "Orbital")
+		if (other.tag == "Orbital" || other.tag == "Player")
 		{
 			//End the beautiful trail that brought them here
 			if (atmos != null)

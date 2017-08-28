@@ -95,12 +95,10 @@ public class PlayerControl : MonoBehaviour
 		Achievement.instance.Register("VictoryScreen", Winning);
 	}
 
-	// Update is called once per frame
-	private void Update()
-	{
-		if (!doneTutorial && tutorial != null)
-		{
-
+			//Controls:                                  ← : Turn CCW                           → : Turn CW                        ↑/Space : Fart!
+			StoryManager.Instance.PlayStorySegment(tutorial);
+            doneTutorial = true;
+        }
 
 			StoryManager.Instance.PlayStorySegment(tutorial);
 			doneTutorial = true;
