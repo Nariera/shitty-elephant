@@ -344,6 +344,11 @@ Prefab:
       propertyPath: m_Pivot.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114547422409791184, guid: 87b927d70925fab47b969d51bd25c1fc,
+        type: 2}
+      propertyPath: PlanetText
+      value: 
+      objectReference: {fileID: 1287829781}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87b927d70925fab47b969d51bd25c1fc, type: 2}
   m_IsPrefabParent: 0
@@ -778,6 +783,11 @@ Prefab:
       propertyPath: m_Pivot.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114547422409791184, guid: 87b927d70925fab47b969d51bd25c1fc,
+        type: 2}
+      propertyPath: PlanetText
+      value: 
+      objectReference: {fileID: 1287829781}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87b927d70925fab47b969d51bd25c1fc, type: 2}
   m_IsPrefabParent: 0
@@ -2049,6 +2059,11 @@ Prefab:
       propertyPath: m_Pivot.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114547422409791184, guid: 87b927d70925fab47b969d51bd25c1fc,
+        type: 2}
+      propertyPath: PlanetText
+      value: 
+      objectReference: {fileID: 1287829781}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87b927d70925fab47b969d51bd25c1fc, type: 2}
   m_IsPrefabParent: 0
@@ -2281,6 +2296,11 @@ Prefab:
       propertyPath: m_Pivot.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114547422409791184, guid: 87b927d70925fab47b969d51bd25c1fc,
+        type: 2}
+      propertyPath: PlanetText
+      value: 
+      objectReference: {fileID: 1287829781}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87b927d70925fab47b969d51bd25c1fc, type: 2}
   m_IsPrefabParent: 0
@@ -2710,6 +2730,11 @@ Prefab:
       propertyPath: m_Pivot.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114547422409791184, guid: 87b927d70925fab47b969d51bd25c1fc,
+        type: 2}
+      propertyPath: PlanetText
+      value: 
+      objectReference: {fileID: 1287829781}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87b927d70925fab47b969d51bd25c1fc, type: 2}
   m_IsPrefabParent: 0
@@ -3082,7 +3107,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 444, y: -489}
+  m_AnchoredPosition: {x: 789, y: -507}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1287829777
@@ -3288,6 +3313,11 @@ Prefab:
       propertyPath: m_Pivot.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114547422409791184, guid: 87b927d70925fab47b969d51bd25c1fc,
+        type: 2}
+      propertyPath: PlanetText
+      value: 
+      objectReference: {fileID: 1287829781}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87b927d70925fab47b969d51bd25c1fc, type: 2}
   m_IsPrefabParent: 0
@@ -3561,6 +3591,11 @@ Prefab:
       propertyPath: m_Pivot.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114547422409791184, guid: 87b927d70925fab47b969d51bd25c1fc,
+        type: 2}
+      propertyPath: PlanetText
+      value: 
+      objectReference: {fileID: 1287829781}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87b927d70925fab47b969d51bd25c1fc, type: 2}
   m_IsPrefabParent: 0
@@ -4507,6 +4542,11 @@ Prefab:
       propertyPath: m_Pivot.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114547422409791184, guid: 87b927d70925fab47b969d51bd25c1fc,
+        type: 2}
+      propertyPath: PlanetText
+      value: 
+      objectReference: {fileID: 1287829781}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87b927d70925fab47b969d51bd25c1fc, type: 2}
   m_IsPrefabParent: 0
@@ -4842,6 +4882,11 @@ Prefab:
       propertyPath: m_Pivot.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114547422409791184, guid: 87b927d70925fab47b969d51bd25c1fc,
+        type: 2}
+      propertyPath: PlanetText
+      value: 
+      objectReference: {fileID: 1287829781}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87b927d70925fab47b969d51bd25c1fc, type: 2}
   m_IsPrefabParent: 0
