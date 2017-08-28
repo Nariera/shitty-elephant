@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.09.00">
+    <object class="AudioFile" id="{575473f5-cfb6-4c60-b645-5a35211a0c46}">
+        <property name="assetPath">
+            <value>fart4.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>5.7778684807256235</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{c90b7b55-70ac-4a5a-a652-11c80f2b6f8f}</destination>
+        </relationship>
+    </object>
+</objects>

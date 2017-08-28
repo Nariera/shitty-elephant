@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 58209743279039136}
   m_Layer: 0
   m_Name: Elephaint
-  m_TagString: Orbital
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

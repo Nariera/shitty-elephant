@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.09.00">
+    <object class="AudioFile" id="{770a93aa-42a7-47e5-b89b-e0aa0a4a6dab}">
+        <property name="assetPath">
+            <value>accordion3.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>57.790566893424035</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{c90b7b55-70ac-4a5a-a652-11c80f2b6f8f}</destination>
+        </relationship>
+    </object>
+</objects>
