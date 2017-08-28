@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: CloudWorldStory
   m_EditorClassIdentifier: 
   Descript_Name: 
-  StoryText: 
-  duration: 5
+  StoryText: Whoosh
+  duration: 10

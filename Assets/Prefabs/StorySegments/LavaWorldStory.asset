@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: LavaWorldStory
   m_EditorClassIdentifier: 
   Descript_Name: 
-  StoryText: 
-  duration: 5
+  StoryText: This planet matches how I feel.
+  duration: 10
