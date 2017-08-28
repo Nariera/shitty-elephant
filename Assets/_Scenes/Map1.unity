@@ -406,12 +406,6 @@ Prefab:
       propertyPath: fartOMeter
       value: 
       objectReference: {fileID: 1229032636}
-    - target: {fileID: 114461842906268676, guid: 45f9ff70356b96848a1588fc4633b3e1,
-        type: 2}
-      propertyPath: tutorial
-      value: 
-      objectReference: {fileID: 11400000, guid: 887dd918c64b04e4c97e7450bc45fbf5,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45f9ff70356b96848a1588fc4633b3e1, type: 2}
   m_IsPrefabParent: 0
@@ -1396,6 +1390,7 @@ MonoBehaviour:
   PoptartPrefab: {fileID: 1251483136831466, guid: b8ea21d357d854309a86dba94073c059,
     type: 2}
   activePoptarts: []
+  scale: 0.5
 --- !u!1 &896495346 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1280973886066966, guid: 87b927d70925fab47b969d51bd25c1fc,
@@ -2126,6 +2121,28 @@ GameObject:
   m_PrefabParentObject: {fileID: 1309675777280566, guid: 45f9ff70356b96848a1588fc4633b3e1,
     type: 2}
   m_PrefabInternal: {fileID: 372230862}
+--- !u!114 &1063007013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1063007011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Fart
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 55
 --- !u!1 &1098143117
 GameObject:
   m_ObjectHideFlags: 0
@@ -3903,6 +3920,7 @@ GameObject:
   - component: {fileID: 1886638607}
   - component: {fileID: 1886638608}
   - component: {fileID: 1886638609}
+  - component: {fileID: 1886638610}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4052,6 +4070,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 372230864}
+--- !u!114 &1886638610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1886638599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Main Track
+  PlayEvent: 1
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1001 &1958299165
 Prefab:
   m_ObjectHideFlags: 0
@@ -4501,3 +4541,32 @@ Transform:
   m_PrefabParentObject: {fileID: 4597281910933722, guid: 87b927d70925fab47b969d51bd25c1fc,
     type: 2}
   m_PrefabInternal: {fileID: 2118102101}
+--- !u!1 &2142221091 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1852849351108100, guid: 45f9ff70356b96848a1588fc4633b3e1,
+    type: 2}
+  m_PrefabInternal: {fileID: 372230862}
+--- !u!114 &2142221098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2142221091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Spaaace
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Cold
+    Value: 1
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0

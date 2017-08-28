@@ -59,5 +59,7 @@ public class PlayerCondition : MonoBehaviour
 		}
 		if (temp > 100)
 			temp = 100;
+
+
 	}
 }
