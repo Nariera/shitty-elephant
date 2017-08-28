@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Name: FaceyStory
   m_EditorClassIdentifier: 
   Descript_Name: 
-  StoryText: It's possible someone still lives here, but you'd rather not deal with
-    them.
+  StoryText: It's possible someone still lives here, but I don't think I'd like them.
   duration: 10

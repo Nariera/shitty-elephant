@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Name: TheShiningStory
   m_EditorClassIdentifier: 
   Descript_Name: The Shining
-  StoryText: The leaderof this world promised greatness.  All he brought was corruption
-    and ruin.
+  StoryText: He didn't make things great.
   duration: 10

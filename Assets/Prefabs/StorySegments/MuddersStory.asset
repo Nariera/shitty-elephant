@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: MuddersStory
   m_EditorClassIdentifier: 
   Descript_Name: Home
-  StoryText: Everyone you knew here is dead.  The planet will soon follow.  You hope
-    that other worlds still live.
+  StoryText: They say everyone dies alone.  But everyone here died together.  Except
+    for me...
   duration: 10
