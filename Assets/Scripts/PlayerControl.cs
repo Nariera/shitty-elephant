@@ -81,6 +81,7 @@ public class PlayerControl : MonoBehaviour
     private void Start()
     {
 
+<<<<<<< HEAD
         if (body == null)
         {
             body = GetComponent<Rigidbody2D>();
@@ -101,6 +102,19 @@ public class PlayerControl : MonoBehaviour
        if (!doneTutorial && tutorial != null)
       {
  
+=======
+		//"VictoryScreen"
+		Achievement.instance.Register("VictoryScreen", Winning);
+	}
+
+	// Update is called once per frame
+	private void Update()
+	{
+		if (!doneTutorial && tutorial != null)
+		{
+
+
+>>>>>>> 5c033647b6881c2b1c7b6792d171bff58b9bca88
 			StoryManager.Instance.PlayStorySegment(tutorial);
 			doneTutorial = true;
 		}
