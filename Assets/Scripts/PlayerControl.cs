@@ -78,30 +78,27 @@ public class PlayerControl : MonoBehaviour
 	[SerializeField]
 	private StorySegment tutorial;
 
-	private void Start()
-	{
+    private void Start()
+    {
+        if (body == null)
+        {
+            body = GetComponent<Rigidbody2D>();
+        }
+        cameraAnim = Camera.main.GetComponent<Animator>();
+        mahAnim = GetComponent<Animator>();
 
-		if (body == null)
-		{
-			body = GetComponent<Rigidbody2D>();
-		}
-		cameraAnim = Camera.main.GetComponent<Animator>();
-		mahAnim = GetComponent<Animator>();
+        body.AddForce(new Vector2(0, DownVelocity), ForceMode2D.Impulse);
+        RespawnLocation = transform.position;
 
-		body.AddForce(new Vector2(0, DownVelocity), ForceMode2D.Impulse);
-		RespawnLocation = transform.position;
+        //"VictoryScreen"
+        Achievement.instance.Register("VictoryScreen", Winning);
+    }
 
-		//"VictoryScreen"
-		Achievement.instance.Register("VictoryScreen", Winning);
-	}
-
-	// Update is called once per frame
-	private void Update()
-	{
-		if (!doneTutorial && tutorial != null)
-		{
-
-
+// Update is called once per frame
+   private void Update()
+   {
+       if (!doneTutorial && tutorial != null)
+      {
 			StoryManager.Instance.PlayStorySegment(tutorial);
 			doneTutorial = true;
 		}
