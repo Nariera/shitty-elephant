@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class UpdateWin : MonoBehaviour
 {
     private string PlanetName = "";
-
+    [SerializeField]
+    private Text PlanetText; 
     private void Start()
     {
         PlanetName = transform.parent.transform.parent.name;
@@ -43,6 +44,8 @@ public class UpdateWin : MonoBehaviour
 			{
 				Achievement.instance.Trigger("VictoryScreen");
 			}
+
+            PlanetText.text = "Planet visited : " + totalVisits;
         }
     }
 }
