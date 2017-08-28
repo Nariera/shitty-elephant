@@ -1,0 +1,194 @@
+Initialize engine version: 2017.1.0f3 (472613c02cf7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 10.1]
+    Renderer: Intel(R) HD Graphics 3000 (ID=0x116)
+    Vendor:   Intel
+    VRAM:     1632 MB
+    Driver:   9.17.10.4459
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Sagubaguy\Desktop\shitty-elephant-game_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Sagubaguy\Desktop\shitty-elephant-game_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Sagubaguy\Desktop\shitty-elephant-game_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Sagubaguy\Desktop\shitty-elephant-game_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Sagubaguy\Desktop\shitty-elephant-game_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Sagubaguy\Desktop\shitty-elephant-game_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Sagubaguy\Desktop\shitty-elephant-game_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Sagubaguy\Desktop\shitty-elephant-game_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Sagubaguy\Desktop\shitty-elephant-game_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Sagubaguy\Desktop\shitty-elephant-game_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Sagubaguy\Desktop\shitty-elephant-game_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
+Loading C:\Users\Sagubaguy\Desktop\shitty-elephant-game_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
+Platform assembly: C:\Users\Sagubaguy\Desktop\shitty-elephant-game_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Sagubaguy\Desktop\shitty-elephant-game_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.473 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 3.548839 ms
+The referenced script on this Behaviour (Game Object 'PlanetAtmosphere') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'PlanetAtmosphere') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'PlanetAtmosphere') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'PlanetAtmosphere') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Fart') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'PlanetAtmosphere') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'PlanetAtmosphere') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'PlanetAtmosphere') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'PlanetAtmosphere') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'PlanetAtmosphere') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Main Camera') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'PlanetAtmosphere') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'PlanetAtmosphere') is missing!
+ 
+(Filename:  Line: 1758)
+
+The referenced script on this Behaviour (Game Object 'Elephaint') is missing!
+ 
+(Filename:  Line: 1758)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 28.661132 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1241.
+Total: 0.744305 ms (FindLiveObjects: 0.082551 ms CreateObjectMapping: 0.030789 ms MarkObjects: 0.601513 ms  DeleteObjects: 0.028112 ms)
+
+Triggered story segment: Tutorial
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Started Playing: Tutorial
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Mudders Anonymopus's Atmo trigger!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Mudders Anonymopus is visited!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Triggered story segment: MuddersStory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Started Playing: MuddersStory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Cam's Vacation's Atmo trigger!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Cam's Vacation is visited!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Triggered story segment: CamVacationStory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Started Playing: CamVacationStory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Respawn!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Mudders Anonymopus's Atmo trigger!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Respawn!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+CloudyWorld's Atmo trigger!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+CloudyWorld is visited!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at UpdateWin.OnTriggerEnter2D (UnityEngine.Collider2D collision) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Triggered story segment: CloudWorldStory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Started Playing: CloudWorldStory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Respawn!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Blue Giant's Atmo trigger!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Blue Giant is visited!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Triggered story segment: BlueGiantStory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Started Playing: BlueGiantStory
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Respawn!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Respawn!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 46ac -> priority: 1 
+  Thread -> id: 3e60 -> priority: 1 
