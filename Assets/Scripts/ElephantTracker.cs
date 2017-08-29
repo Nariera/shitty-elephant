@@ -21,7 +21,7 @@ public class ElephantTracker : MonoBehaviour
 
 			canvasGroup.alpha = 1;
 
-			transform.localScale = Vector3.one * distMultiplier / 2;
+			transform.localScale = Vector3.one * distMultiplier;
 
 			v3Pos.x -= 0.5f;  // Translate to use center of viewport
 			v3Pos.y -= 0.5f; 
@@ -34,7 +34,7 @@ public class ElephantTracker : MonoBehaviour
 			//transform.localEulerAngles = new Vector3(0.0f, 0.0f, -fAngle * Mathf.Rad2Deg);
 
 			v3Pos.x = 0.45f * Mathf.Sin(fAngle) + 0.5f;  // Place on ellipse touching 
-			v3Pos.y = 0.45f * Mathf.Cos(fAngle) + 0.5f;  //   side of viewport
+			v3Pos.y = 0.42f * Mathf.Cos(fAngle) + 0.5f;  //   side of viewport
 			v3Pos.z = Camera.main.nearClipPlane + 0.01f;  // Looking from neg to pos Z;
 			transform.position = Camera.main.ViewportToWorldPoint(v3Pos);
 		}

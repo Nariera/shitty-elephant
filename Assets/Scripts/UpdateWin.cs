@@ -22,16 +22,14 @@ public class UpdateWin : MonoBehaviour
 			int totalVisits = 0;
 			bool earthVisited = false;
 
+			Achievement.instance.Trigger(PlanetName + " approached.");
+
 			if (Achievement.instance.IsTriggered(PlanetName + " approached."))
 				totalVisits++;
 
-			Achievement.instance.Trigger(PlanetName + " approached.");
-
 			if (Achievement.instance.IsTriggered("Arf approached."))
-			{
-				totalVisits++;
 				earthVisited = true;
-			}
+
 			if (earthVisited && totalVisits > 4 && PlanetName == "Arf")
 			{
 				Achievement.instance.Trigger("VictoryScreen");

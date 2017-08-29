@@ -21,7 +21,10 @@ public class Arrow : MonoBehaviour
 
 			canvasGroup.alpha = distMultiplier;
 
-			transform.localScale = Vector3.one * distMultiplier / 2;
+			transform.localScale = Vector3.one * distMultiplier / 1.5f;
+
+			if (planetTarget == CameraTracking.nearestPlanetToPlayer)
+				transform.localScale *= 1.5f;
 
 			v3Pos.x -= 0.5f;  // Translate to use center of viewport
 			v3Pos.y -= 0.5f; 
