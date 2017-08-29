@@ -78,27 +78,27 @@ public class PlayerControl : MonoBehaviour
 	[SerializeField]
 	private StorySegment tutorial;
 
-    private void Start()
-    {
-        if (body == null)
-        {
-            body = GetComponent<Rigidbody2D>();
-        }
-        cameraAnim = Camera.main.GetComponent<Animator>();
-        mahAnim = GetComponent<Animator>();
+	private void Start()
+	{
+		if (body == null)
+		{
+			body = GetComponent<Rigidbody2D>();
+		}
+		cameraAnim = Camera.main.GetComponent<Animator>();
+		mahAnim = GetComponent<Animator>();
 
-        body.AddForce(new Vector2(0, DownVelocity), ForceMode2D.Impulse);
-        RespawnLocation = transform.position;
+		body.AddForce(new Vector2(0, DownVelocity), ForceMode2D.Impulse);
+		RespawnLocation = transform.position;
 
-        //"VictoryScreen"
-        Achievement.instance.Register("VictoryScreen", Winning);
-    }
+		//"VictoryScreen"
+		Achievement.instance.Register("VictoryScreen", Winning);
+	}
 
-// Update is called once per frame
-   private void Update()
-   {
-       if (!doneTutorial && tutorial != null)
-      {
+	// Update is called once per frame
+	private void Update()
+	{
+		if (!doneTutorial && tutorial != null)
+		{
 			StoryManager.Instance.PlayStorySegment(tutorial);
 			doneTutorial = true;
 		}
@@ -266,8 +266,6 @@ public class PlayerControl : MonoBehaviour
 		//Physics && gas
 		if (!isKeyPressed)
 		{
-			fartVFX.SendMessage("Stop");
-
 
 			if (CameraTracking.nearestPlanetToPlayer != null)
 			{
@@ -291,8 +289,6 @@ public class PlayerControl : MonoBehaviour
 
 			Vector3 currentForward = Quaternion.Euler(0, 0, transform.root.eulerAngles.z) * forward;
 			body.AddForce(currentForward * fartSpeed, ForceMode2D.Impulse);
-
-			fartVFX.SendMessage("Play");
 		}
 		else
 		{
@@ -307,8 +303,6 @@ public class PlayerControl : MonoBehaviour
 
 			Vector3 currentForward = Quaternion.Euler(0, 0, transform.root.eulerAngles.z) * forward;
 			body.AddForce(currentForward * fartSpeed / 20, ForceMode2D.Impulse);
-
-			fartVFX.SendMessage("Play");
 		}
 
 		//Anim
