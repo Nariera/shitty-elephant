@@ -2471,17 +2471,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/Fart
-  PlayEvent: 0
-  StopEvent: 0
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 55
 --- !u!1 &1098143117
 GameObject:
   m_ObjectHideFlags: 0
@@ -3251,6 +3240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 372230863}
   colorifyMeCapn: 1
+  camLerpSpeed: 100
 --- !u!95 &1272910609
 Animator:
   serializedVersion: 3
@@ -4714,6 +4704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 372230863}
   colorifyMeCapn: 1
+  camLerpSpeed: 5
 --- !u!114 &1886638607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4761,17 +4752,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/Main Track
-  PlayEvent: 1
-  StopEvent: 0
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!1001 &1958299165
 Prefab:
   m_ObjectHideFlags: 0
@@ -5247,16 +5227,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/Spaaace
-  PlayEvent: 0
-  StopEvent: 0
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params:
-  - Name: Cold
-    Value: 1
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0

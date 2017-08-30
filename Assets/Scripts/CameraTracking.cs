@@ -13,6 +13,12 @@ public class CameraTracking : MonoBehaviour
 
 	public static List<GameObject> planets = new List<GameObject>();
 	public static Transform nearestPlanetToPlayer;
+	public float camLerpSpeed = 1;
+	static Transform lastNearestPlanet;
+	float lerpVal = 0;
+	bool initialCameraMove = true;
+
+	float elephantDistanceFromEdge = 5;
 
 	void Update()
 	{
@@ -40,9 +46,10 @@ public class CameraTracking : MonoBehaviour
 
 		if (nearestPlanetToPlayer != transform)
 		{
-			//Camera position is the middle between the player and the nearest planet
-			transform.position = (player.position + nearestPlanetToPlayer.position) / 2;
-			transform.position = new Vector3(transform.position.x, transform.position.y, -20);
+			MoveCameraTowardsNewPlanet(nearestPlanetToPlayer, instant: initialCameraMove);
+
+			//Done with that
+			initialCameraMove = false;
 
 			var settings = post.profile.colorGrading.settings;
 
@@ -59,6 +66,54 @@ public class CameraTracking : MonoBehaviour
 
 			post.profile.colorGrading.settings = settings;
 		}
+	}
+
+	public void MoveCameraTowardsNewPlanet(Transform planet, bool instant = false)
+	{
+		//Camera position is ideally the middle between the player and the nearest planet
+		var idealPosition = (player.position + planet.position) / 2;
+
+		//Keep player on screen
+		var xClamped = ClampX(idealPosition.x);
+		var yClamped = ClampY(idealPosition.y);
+
+		//This is the real position to use
+		var newPosition = new Vector3(xClamped, yClamped, -20);
+
+		//This is a new target!
+		if (planet != lastNearestPlanet)
+		{
+			lastNearestPlanet = planet;
+			lerpVal = 0;
+		}
+
+		//Lerp pos
+		if (!instant)
+		{
+			//Be sure to still force clamp (if the player is moving faster than the camera lerps)
+			var currentPosClamped = new Vector3(ClampX(transform.position.x), ClampY(transform.position.y), -20);
+
+			transform.position = Vector3.Lerp(currentPosClamped, newPosition, lerpVal);
+
+			lerpVal += 0.00001f * camLerpSpeed;
+		}
+		//Instants and 
+		else
+		{
+			transform.position = newPosition;
+		}
+	}
+
+	float ClampX(float xPos)
+	{
+		return Mathf.Clamp(xPos, player.position.x - Camera.main.orthographicSize * Camera.main.aspect + elephantDistanceFromEdge, 
+			player.position.x + Camera.main.orthographicSize * Camera.main.aspect - elephantDistanceFromEdge);
+	}
+
+	float ClampY(float yPos)
+	{
+		return Mathf.Clamp(yPos, player.position.y - Camera.main.orthographicSize + elephantDistanceFromEdge, 
+			player.position.y + Camera.main.orthographicSize - elephantDistanceFromEdge);
 	}
 
 	void Awake()
