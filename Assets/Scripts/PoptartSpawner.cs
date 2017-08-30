@@ -31,6 +31,8 @@ public class PoptartSpawner : MonoBehaviour
 			poptart.transform.SetParent(transform);
 			poptart.transform.localScale = Vector3.one * scale;
 
+			if (Random.Range(0, 2) == 0)
+				poptart.transform.localScale *= -1;
 
 			poptartPool.Add(poptart);
 			Gravity.orbitalsTable.Add(poptart, poptart.GetComponent<Rigidbody2D>());
@@ -58,7 +60,7 @@ public class PoptartSpawner : MonoBehaviour
 		var boost = poptart.GetComponent<Boosters>();
 
 		boost.initialBoost = new Vector2(-xStart / Random.Range(10, 100), -yStart / Random.Range(10, 100));
-		boost.initialTorque = Random.Range(-6f, 6f);
+		boost.initialTorque = Random.Range(-20f, 20f);
 
 		activePoptarts.Add(poptart);
 		poptart.SetActive(true);

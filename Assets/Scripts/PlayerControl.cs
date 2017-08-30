@@ -352,8 +352,9 @@ public class PlayerControl : MonoBehaviour
 	{
 		if (Victory)
 			return;
-		gameOverScreen.SetActive(true);
 
+		if (gameOverScreen != null)
+			gameOverScreen.SetActive(true);
 	}
 
 	//Boost you one way super fast

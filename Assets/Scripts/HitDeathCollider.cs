@@ -22,9 +22,12 @@ public class HitDeathCollider : MonoBehaviour
 		boomBoomInMyRoomRoom.transform.position = other.transform.position;
 
 		boomBoomInMyRoomRoom.SetActive(true);
-        if(!boomBooms.Contains(boomBoomInMyRoomRoom)){
-            boomBooms.Add(boomBoomInMyRoomRoom);
-        }
+		boomBoomInMyRoomRoom.GetComponentInChildren<ParticleSystem>().Play();
+
+		if (!boomBooms.Contains(boomBoomInMyRoomRoom))
+		{
+			boomBooms.Add(boomBoomInMyRoomRoom);
+		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D other)
